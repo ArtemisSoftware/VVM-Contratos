@@ -6,12 +6,14 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.acordo.AcordoFragment">
+    tools:context=".ui.acordo.AcordoFragment"
+    android:padding="15dp">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="400dp"
-        android:layout_height="500dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +42,7 @@
         <View
             android:id="@+id/view"
             style="@style/divisorHorizontal"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_logo" />
@@ -47,24 +50,195 @@
 
         <TextView
             android:id="@+id/textView"
-            style="@style/titulo"
+            style="@style/titulo.bold"
+            android:layout_marginTop="32dp"
             android:text="@string/dados_contratos"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view" />
 
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/nif"
             app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            android:hint="@string/nif">
+            app:layout_constraintTop_toBottomOf="@+id/textView">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+            <TextView
+                style="@style/detalhe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tipo_contrato" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spinner_tipo_contrato"
+                style="@style/texto"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txt_mensagem_agenda"
+            style="@style/texto"
+            android:layout_marginTop="24dp"
+            android:text="@string/contrato_iniciado_agenda"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_validar"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/cor_botao"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/validar"
+            android:textColor="@color/cor_texto_branco"
+            app:icon="@drawable/ic_validar_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_mensagem_agenda" />
+
+
+        <TextView
+            android:id="@+id/txt_tipo_cliente"
+            style="@style/texto"
+            android:layout_marginTop="24dp"
+            android:text="@string/contrato_iniciado_agenda"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/btn_validar" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/txt_tipo_cliente">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/detalhe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/empresa" />
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/spinner_empresa"
+                    style="@style/texto"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout1"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout1"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout1">
+
+                <TextView
+                    style="@style/detalhe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/marca" />
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/spinner_marca"
+                    style="@style/texto"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_iniciar"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/cor_botao"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/iniciar"
+            android:textColor="@color/cor_texto_branco"
+            app:icon="@drawable/ic_comecar_contrato_24"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraint1" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.90"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/fab_negativo"
+            android:src="@drawable/ic_launcher_foreground"
+            app:backgroundTint="@android:color/white"
+            app:borderWidth="0dp"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="@android:color/black" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

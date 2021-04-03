@@ -9,4 +9,6 @@
 
     <color name="cor_texto">#070707</color>
     <color name="cor_divisor">#dddddd</color>
+    <color name="cor_botao">#3395ff</color>
+    <color name="cor_texto_branco">#fff</color>
 </resources>

@@ -7,4 +7,32 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="wrapView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <!-- TEXTO -->
+
+    <style name="titulo" parent="wrapView">
+        <item name="android:textColor">@color/cor_texto</item>
+        <item name="android:textSize">23dp</item>
+    </style>
+
+    <style name="texto" parent="wrapView">
+        <item name="android:textColor">@color/cor_texto</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+
+
+    <!-- DIVISOR -->
+
+    <style name="divisorHorizontal" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.7dp</item>
+        <item name="android:background">@color/cor_divisor</item>
+    </style>
+
 </resources>

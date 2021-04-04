@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">VvmContratos</string>
+
+
+    <!-- texto de teste -->
+    <string name="lorem_ipsum_titulo">Lorem ipsum dolor sit amet</string>
+
+    <string name="lorem_ipsum_grande">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing </string>
+    <string name="lorem_ipsum_texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+    <string name="lorem_ipsum_texto_pequeno">consectetur adipiscing</string>
+    <string name="lorem_ipsum_numero">290346</string>
+    <string name="lorem_ipsum_data">29-03-2046</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="novo_contrato">Novo contrato</string>
@@ -11,4 +22,16 @@
     <string name="iniciar">Iniciar</string>
     <string name="empresa">Empresa</string>
     <string name="marca">Marca</string>
+    <string name="criar_cliente">Criar cliente</string>
+    <string name="cliente_inexistente_preencher_campos">Cliente inexistente - Por favor preencha os campos</string>
+    <string name="cliente">Cliente</string>
+    <string name="email">Email</string>
+    <string name="atividade">Atividade</string>
+    <string name="niss">Niss</string>
+    <string name="responsavel">Responsável</string>
+    <string name="segmento">Segmento</string>
+    <string name="morada">Morada</string>
+    <string name="freguesia_localidade">Freguesia / Localidade</string>
+    <string name="codigo_postal">Código Postal</string>
+    <string name="contactos">Contactos</string>
 </resources>

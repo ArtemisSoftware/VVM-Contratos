@@ -14,38 +14,98 @@
     </style>
 
 
-    <!-- TEXTO -->
 
-    <style name="titulo" parent="wrapView">
+
+    <style name="caligrafia"  parent="wrapView">
         <item name="android:textColor">@color/cor_texto</item>
-        <item name="android:textSize">28dp</item>
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
 
-    <style name="titulo.bold" parent="titulo">
+
+    <!-- ############################ TITULOS ######################### -->
+
+
+    <style name="titulo" parent="caligrafia">
+        <item name="android:textColor">@color/cor_texto</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+
+
+    <style name="titulo.regular" parent="titulo">
+        <item name="android:textSize">28dp</item>
+    </style>
+
+    <style name="titulo.regular.bold" parent="titulo.regular">
         <item name="android:textStyle">bold</item>
     </style>
 
 
-    <style name="texto" parent="wrapView">
-        <item name="android:textColor">@color/cor_texto</item>
-        <item name="android:textSize">13dp</item>
-        <item name="android:fontFamily">sans-serif-light</item>
+    <style name="titulo.medio" parent="titulo">
+        <item name="android:textSize">23dp</item>
+    </style>
+
+    <style name="titulo.medio.bold" parent="titulo.medio">
+        <item name="android:textStyle">bold</item>
     </style>
 
 
-    <style name="detalhe" parent="wrapView">
-        <item name="android:textColor">@color/cor_texto</item>
+    <style name="titulo.detalhe" parent="titulo">
+        <item name="android:textSize">17dp</item>
+    </style>
+
+    <style name="titulo.detalhe.bold" parent="titulo.detalhe">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--  ############################ TEXTO #########################  -->
+
+
+    <style name="texto" parent="caligrafia">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+
+
+    <style name="texto.detalhe" parent="caligrafia">
         <item name="android:textSize">10dp</item>
-        <item name="android:fontFamily">sans-serif-light</item>
     </style>
 
-    <!-- DIVISOR -->
+
+
+
+    <style name="texto.rotulo.titulo" parent="caligrafia">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="texto.rotulo.descricao" parent="caligrafia">
+        <item name="android:textSize">13dp</item>
+    </style>
+
+
+
+    <!--  ############################ DIVISOR #########################  -->
+
+
 
     <style name="divisorHorizontal" >
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0.7dp</item>
         <item name="android:background">@color/cor_divisor</item>
     </style>
+
+
+
+
+    <!--  ############################ BOTAO #########################  -->
+
+    <style name="btnOutlined" parent="wrapView">
+        <item name="android:background">@drawable/btn_outlined_focus</item>
+        <item name="android:padding">20dp</item>
+    </style>
+
+
+
 
 </resources>

@@ -50,7 +50,7 @@
 
         <TextView
             android:id="@+id/textView"
-            style="@style/titulo.bold"
+            style="@style/titulo.regular.bold"
             android:layout_marginTop="32dp"
             android:text="@string/dados_contratos"
             app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +83,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
             <TextView
-                style="@style/detalhe"
+                style="@style/texto.detalhe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tipo_contrato" />
@@ -112,7 +112,7 @@
             style="?attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="44dp"
             android:backgroundTint="@color/cor_botao"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
@@ -150,7 +150,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    style="@style/detalhe"
+                    style="@style/texto.detalhe"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/empresa" />
@@ -176,7 +176,7 @@
                 app:layout_constraintTop_toTopOf="@+id/linearLayout1">
 
                 <TextView
-                    style="@style/detalhe"
+                    style="@style/texto.detalhe"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/marca" />
@@ -199,7 +199,7 @@
             style="?attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="44dp"
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/cor_botao"
             android:paddingLeft="20dp"

@@ -46,4 +46,8 @@
     <string name="telefone">Telefone</string>
     <string name="telemovel">Telemóvel</string>
     <string name="fax">Fax</string>
+    <string name="unidades_">Unidades:</string>
+    <string name="valor_unitario_">Valor unitário:</string>
+    <string name="iva">Iva:</string>
+    <string name="total__sem_iva">Total (s/IVA)</string>
 </resources>

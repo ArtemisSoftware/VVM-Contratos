@@ -119,13 +119,13 @@
 
 
 
+    <!--  ############################ LISTA #########################  -->
 
+    <style name="lista" parent="wrapView">
+        <item name="android:verticalSpacing">24dp</item>
+        <item name="layout_behavior">@string/appbar_scrolling_view_behavior</item>
 
-
-    <style name="parent.TextLayout">
-        <item name="android:layout_marginLeft">0dp</item>
     </style>
-
 
 
 </resources>

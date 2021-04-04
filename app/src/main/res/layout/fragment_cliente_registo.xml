@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        style="@style/titulo.regular.bold"
+                        android:text="@string/cliente"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/textview2"
+                        style="@style/divisorHorizontal"
+                        android:layout_width="280dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textview3"
+                        style="@style/parentView"
+                        android:hint="@string/cliente"
+                        android:layout_width="500dp"
+                        app:errorEnabled="true"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/textview2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txt_inp_cliente"
+                            style="@style/texto.editavel"
+                            android:inputType="text"
+                            android:maxLines="1"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textview4"
+                        style="@style/parentView"
+                        android:hint="@string/email"
+                        android:layout_width="400dp"
+                        app:errorEnabled="true"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/textview3">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txt_inp_email"
+                            style="@style/texto.editavel"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <CheckBox
+                        style="@style/texto.detalhe"
+                        android:layout_marginStart="24dp"
+                        android:text="@string/autorizado"
+                        app:layout_constraintBottom_toBottomOf="@+id/textview4"
+                        app:layout_constraintStart_toEndOf="@+id/textview4"
+                        app:layout_constraintTop_toTopOf="@+id/textview4" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textview4"
+                        app:layout_constraintTop_toBottomOf="@+id/textview4">
+
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout14"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/guideline"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_id_atividade_1"
+                                    style="@style/texto.rotulo.descricao"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lorem_ipsum_numero" />
+
+
+                                <TextView
+                                    android:id="@+id/txt_descricao_atividade_1"
+                                    style="@style/texto.rotulo.descricao"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="24dp"
+                                    android:text="@string/lorem_ipsum_texto" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_id_atividade_2"
+                                    style="@style/texto.rotulo.descricao"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lorem_ipsum_numero" />
+
+
+                                <TextView
+                                    android:id="@+id/txt_descricao_atividade_2"
+                                    style="@style/texto.rotulo.descricao"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="24dp"
+                                    android:text="@string/lorem_ipsum_texto" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_id_grupo"
+                                    style="@style/texto.rotulo.titulo"
+                                    android:paddingRight="9dp"
+                                    android:visibility="gone" />
+
+
+                                <TextView
+                                    android:id="@+id/txt_grupo"
+                                    style="@style/texto.rotulo.titulo"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/grupo" />
+
+                                <TextView
+                                    style="@style/texto.rotulo.titulo"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="@string/_Atividade_" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintGuide_percent="0.85"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+
+                        <TextView
+                            style="@style/texto.rotulo.descricao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/lorem_ipsum_numero"
+                            app:layout_constraintBottom_toBottomOf="@+id/linearLayout14"
+                            app:layout_constraintStart_toStartOf="@+id/guideline"
+                            app:layout_constraintTop_toTopOf="@+id/linearLayout14" />
+
+
+                        <!--                        <at.markushi.ui.CircleButton-->
+                        <!--                            android:id="@+id/crl_btn_pesquisar_categorias_profissionais"-->
+                        <!--                            style="@style/btnPesquisa" />-->
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textview5"
+                        style="@style/parentView"
+                        android:hint="@string/niss"
+                        android:layout_width="500dp"
+                        app:errorEnabled="true"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/constraint1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txt_inp_niss"
+                            style="@style/texto.editavel"
+                            android:inputType="number"
+                            android:maxLines="1"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_gravar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_launcher_foreground" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

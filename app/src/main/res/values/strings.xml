@@ -34,4 +34,7 @@
     <string name="freguesia_localidade">Freguesia / Localidade</string>
     <string name="codigo_postal">Código Postal</string>
     <string name="contactos">Contactos</string>
+    <string name="autorizado">Autorizado</string>
+    <string name="grupo">Grupo</string>
+    <string name="_Atividade_">" / Atividade"</string>
 </resources>

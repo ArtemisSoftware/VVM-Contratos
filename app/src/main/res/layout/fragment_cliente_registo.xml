@@ -2,7 +2,8 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.cliente.ClienteRegistoFragment">
 
     <data>
 
@@ -244,16 +245,15 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-
-
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textview5"
                         style="@style/parentView"
-                        android:hint="@string/niss"
                         android:layout_width="500dp"
-                        app:errorEnabled="true"
                         android:layout_marginTop="32dp"
+                        android:layout_marginBottom="16dp"
+                        android:hint="@string/niss"
+                        app:errorEnabled="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/textView18"
                         app:layout_constraintTop_toBottomOf="@+id/constraint1">
 
@@ -261,7 +261,7 @@
                             android:id="@+id/txt_inp_niss"
                             style="@style/texto.editavel"
                             android:inputType="number"
-                            android:maxLines="1"/>
+                            android:maxLines="1" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 

@@ -37,4 +37,13 @@
     <string name="autorizado">Autorizado</string>
     <string name="grupo">Grupo</string>
     <string name="_Atividade_">" / Atividade"</string>
+    <string name="tipo_morada">Tipo de morada</string>
+    <string name="moradas_disponiveis">Moradas disponíveis</string>
+    <string name="freguesia">Freguesia</string>
+    <string name="localidade">Localidade</string>
+    <string name="representado_por">Representado por</string>
+    <string name="cargo">Cargo</string>
+    <string name="telefone">Telefone</string>
+    <string name="telemovel">Telemóvel</string>
+    <string name="fax">Fax</string>
 </resources>

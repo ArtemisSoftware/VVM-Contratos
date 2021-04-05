@@ -59,4 +59,11 @@
     <string name="atualizar_data">Atualizar data</string>
     <string name="observacao">Observação</string>
     <string name="documento">Documento</string>
+    <string name="rever_concluir">Rever / Concluir</string>
+    <string name="evento">Evento</string>
+    <string name="numero_contrato">Número do contrato</string>
+    <string name="data_contrato">Data do contrato</string>
+    <string name="documentos_pre_visualizacao">Documentos para pré-visualização</string>
+    <string name="enviar_contrato">Enviar contrato</string>
+    <string name="acordo_incompleto">Acordo incompleto</string>
 </resources>

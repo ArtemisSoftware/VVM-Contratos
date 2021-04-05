@@ -23,8 +23,6 @@
         <TextView
             android:id="@+id/textView1"
             style="@style/titulo.medio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:gravity="center"
             android:text="@string/cliente_inexistente_preencher_campos"

@@ -70,5 +70,10 @@
     <string name="quantidade">Quantidade</string>
     <string name="tipo_extintor">Tipo de extintor</string>
     <string name="data_validade">Data de validade</string>
+    <string name="data_validade_">Data de validade:</string>
     <string name="data_carregamento">Data de carregamento</string>
+    <string name="data_carregamento_">Data de carregamento:</string>
+    <string name="n_serie">Nº Série</string>
+    <string name="n_serie_">Nº Série:</string>
+    <string name="manter">Manter</string>
 </resources>

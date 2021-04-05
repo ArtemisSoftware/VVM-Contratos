@@ -86,6 +86,27 @@
 
 
 
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textview5"
+                    style="@style/parentView"
+                    android:hint="@string/n_serie"
+                    android:layout_width="200dp"
+                    app:errorEnabled="true"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView18"
+                    app:layout_constraintTop_toBottomOf="@+id/textview1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_inp_numero_serie"
+                        style="@style/texto.editavel"
+                        android:inputType="number"
+                        android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraint1"
                 android:layout_width="match_parent"
@@ -93,7 +114,7 @@
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView18"
-                app:layout_constraintTop_toBottomOf="@+id/textview1">
+                app:layout_constraintTop_toBottomOf="@+id/textview5">
 
 
                 <LinearLayout

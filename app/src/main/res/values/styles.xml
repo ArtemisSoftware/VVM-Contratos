@@ -24,6 +24,30 @@
     </style>
 
 
+    <style name="matchParentView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- ############################ VIEW ######################### -->
+
+
+    <style name="ecra"  parent="matchParentView">
+        <item name="android:padding">15dp</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <style name="caligrafia"  parent="wrapView">
         <item name="android:textColor">@color/cor_texto</item>
         <item name="android:fontFamily">sans-serif-light</item>

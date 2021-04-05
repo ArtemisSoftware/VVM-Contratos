@@ -35,7 +35,7 @@
                 android:id="@+id/textView21"
                 style="@style/titulo.medio"
                 android:layout_width="0dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/lorem_ipsum_texto_pequeno"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -54,11 +54,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView21">
 
                 <TextView
-                    style="@style/texto.detalhe"
+                    style="@style/texto"
                     android:text="@string/unidades_"/>
 
                 <TextView
-                    style="@style/texto.detalhe"
+                    style="@style/texto"
                     android:layout_marginLeft="8dp"
                     android:text="@string/lorem_ipsum_numero"/>
                 <!-- android:text="@{anomalia., default=descricao}" -->
@@ -77,11 +77,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
                 <TextView
-                    style="@style/texto.detalhe"
+                    style="@style/texto"
                     android:text="@string/valor_unitario_"/>
 
                 <TextView
-                    style="@style/texto.detalhe"
+                    style="@style/texto"
                     android:layout_marginLeft="8dp"
                     android:text="@string/lorem_ipsum_numero"/>
                 <!-- android:text="@{anomalia., default=descricao}" -->
@@ -100,11 +100,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
                 <TextView
-                    style="@style/texto.detalhe"
+                    style="@style/texto"
                     android:text="@string/iva"/>
 
                 <TextView
-                    style="@style/texto.detalhe"
+                    style="@style/texto"
                     android:layout_marginLeft="8dp"
                     android:text="@string/lorem_ipsum_numero"/>
                 <!-- android:text="@{anomalia., default=descricao}" -->
@@ -123,12 +123,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
                 <TextView
-                    style="@style/texto.detalhe"
+                    style="@style/texto"
                     android:text="@string/total__sem_iva" />
 
                 <TextView
                     android:id="@+id/textView2"
-                    style="@style/texto.detalhe"
+                    style="@style/texto"
                     android:layout_marginLeft="8dp" />
 
                 <!-- android:text="@{anomalia., default=descricao}" -->
@@ -144,6 +144,15 @@
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/ic_lorem_ipsum_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView38" />
 
 
 <!--            android:text="@{StringUtil.converterString(anomalia.resultado.id), default=id}"-->

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    tools:context=".ui.assinatura.AssinaturaFragment"
+    style="@style/ecra">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_assinatura_indisponivel"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/titulo.medio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="@string/contrato_incompleto_assinatura_indisponivel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/view"
+            style="@style/divisorHorizontal"
+            android:layout_width="300dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView1"
+            app:layout_constraintStart_toStartOf="@+id/textView1"
+            app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/constraint_assinatura"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.95"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_lorem_ipsum_24"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_percent="0.15"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/txt_view_titulo"
+                style="@style/titulo.detalhe.bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/assinatura"
+                app:layout_constraintStart_toEndOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+
+            <View
+                android:id="@+id/view1"
+                style="@style/divisorHorizontal"
+                android:layout_width="280dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txt_view_titulo"
+                app:layout_constraintTop_toBottomOf="@+id/txt_view_titulo" />
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_ocorrencia"
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txt_view_titulo"
+                app:layout_constraintTop_toBottomOf="@+id/view1">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        style="@style/texto.detalhe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/opcoes_assinatura" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_opcoes_assinatura"
+                        style="@style/texto"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_recolha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout1"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textview3"
+                            style="@style/parentView"
+                            android:layout_width="300dp"
+                            android:hint="@string/data_recolha_assinatura"
+                            app:errorEnabled="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txt_inp_data_recolha_assinatura"
+                                style="@style/texto.editavel"
+                                android:inputType="text"
+                                android:maxLines="1" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <TextView
+                            style="@style/texto.rotulo.descricao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:text="@string/lorem_ipsum_numero"
+                            app:layout_constraintBottom_toBottomOf="@+id/textview3"
+                            app:layout_constraintStart_toEndOf="@+id/textview3"
+                            app:layout_constraintTop_toTopOf="@+id/textview3" />
+
+                        <!--                        <at.markushi.ui.CircleButton-->
+                        <!--                            android:id="@+id/crl_btn_pesquisar_categorias_profissionais"-->
+                        <!--                            style="@style/btnPesquisa" />-->
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_gravar"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:backgroundTint="@color/cor_botao"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/gravar"
+                    android:textColor="@color/cor_texto_branco"
+                    app:icon="@drawable/ic_lorem_ipsum_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout1"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout_recolha" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/lnr_lyt_assinatura"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txt_view_titulo"
+                app:layout_constraintTop_toBottomOf="@+id/view1" >
+
+
+                <!-- ............... rubricas ...................... -->
+
+
+
+            </LinearLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_alerta_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txt_view_titulo"
+                app:layout_constraintTop_toBottomOf="@+id/view1" >
+
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:src="@drawable/ic_lorem_ipsum_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/texto"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/alerta_assinatura_rt"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_atualizar"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/cor_botao"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/atualizar_data"
+                    android:textColor="@color/cor_texto_branco"
+                    app:icon="@drawable/ic_lorem_ipsum_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView3"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/lnr_lyt_comentario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txt_view_titulo"
+                app:layout_constraintTop_toBottomOf="@+id/constraint_alerta_data">
+
+
+                <TextView
+                    android:id="@+id/txt_comentario"
+                    style="@style/texto.rotulo.descricao"
+                    android:text="@string/lorem_ipsum_texto" />
+
+                <TextView
+                    android:id="@+id/txt_titulo_comentario"
+                    style="@style/texto.rotulo.titulo"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/cliente" />
+
+            </LinearLayout>
+
+
+
+            <!--            &lt;!&ndash; ............... comentario ...................... &ndash;&gt;-->
+
+
+<!--            <LinearLayout android:id="@+id/lnr_lyt_comentario"-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_height="45dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:visibility="gone">-->
+
+
+<!--                <LinearLayout android:layout_width="500dp"-->
+<!--                    android:layout_height="60dp"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:layout_marginLeft="54dp"-->
+<!--                    android:gravity="center_vertical">-->
+
+<!--                    <TextView android:id="@+id/txt_view_comentario"-->
+<!--                        style="@style/txt_texto_6_1"/>-->
+
+<!--                    <TextView android:id="@+id/txt_view_rotulo_comentario"-->
+<!--                        style="@style/txt_rotulo"-->
+<!--                        android:layout_width="170dp"-->
+<!--                        android:layout_marginTop="1dp"-->
+<!--                        android:gravity="center_vertical"/>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</RelativeLayout>

@@ -50,4 +50,11 @@
     <string name="valor_unitario_">Valor unitário:</string>
     <string name="iva">Iva:</string>
     <string name="total__sem_iva">Total (s/IVA)</string>
+    <string name="opcoes_assinatura">Opções de assinatura</string>
+    <string name="data_recolha_assinatura">Data da recolha da assinatura</string>
+    <string name="contrato_incompleto_assinatura_indisponivel">Contrato incompleto - Assinatura indisponível</string>
+    <string name="assinatura">Assinatura</string>
+    <string name="gravar">Gravar</string>
+    <string name="alerta_assinatura_rt">Num contrato de responsabilidade total a data do contrato e a data dos pagamentos deve ser a mesma.</string>
+    <string name="atualizar_data">Atualizar data</string>
 </resources>

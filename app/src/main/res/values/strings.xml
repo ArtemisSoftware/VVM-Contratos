@@ -66,4 +66,9 @@
     <string name="documentos_pre_visualizacao">Documentos para pré-visualização</string>
     <string name="enviar_contrato">Enviar contrato</string>
     <string name="acordo_incompleto">Acordo incompleto</string>
+    <string name="extintor">Extintor</string>
+    <string name="quantidade">Quantidade</string>
+    <string name="tipo_extintor">Tipo de extintor</string>
+    <string name="data_validade">Data de validade</string>
+    <string name="data_carregamento">Data de carregamento</string>
 </resources>

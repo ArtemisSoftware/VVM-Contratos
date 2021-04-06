@@ -91,6 +91,9 @@
     <string name="n_trabalhadores">Nº Trabalhadores</string>
     <string name="valor_contrato_sem_iva">Valor contracto s/IVA</string>
     <string name="producao">Produção</string>
+    <string name="producao_">Produção: </string>
     <string name="tipo_actividade">Tipo atividade</string>
     <string name="ref_campanhas">Ref. campanhas</string>
+    <string name="data_emissao">Data de emissão:</string>
+    <string name="valor_">Valor:</string>
 </resources>

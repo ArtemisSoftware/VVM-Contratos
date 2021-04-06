@@ -109,4 +109,7 @@
     <string name="deseja_atualizar_tpa">Deseja atualizar o identificador do TPA?</string>
     <string name="utilizador">Utilizador</string>
     <string name="palavra_chave">Palavra-chave</string>
+    <string name="local">Local</string>
+    <string name="horario">Horário</string>
+    <string name="tipo_formacao">Tipo de formação</string>
 </resources>

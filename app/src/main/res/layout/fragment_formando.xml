@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.servicos.formacao.FormacaoFragment">
+    tools:context=".ui.servicos.formacao.FormandoFragment">
 
     <data>
 
@@ -377,33 +377,36 @@
 
                     </LinearLayout>
 
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+                        <TextView
+                            style="@style/texto.detalhe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/clinica" />
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/spinner_clinica"
+                            style="@style/texto"
+                            android:layout_width="500dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp" />
+
+                    </LinearLayout>
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
-                <LinearLayout
-                    android:id="@+id/linearLayout3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="32dp"
-                    app:layout_constraintStart_toStartOf="@+id/textView18"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
-                    <TextView
-                        style="@style/texto.detalhe"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/clinica" />
-
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:id="@+id/spinner_clinica"
-                        style="@style/texto"
-                        android:layout_width="500dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp" />
-
-                </LinearLayout>
 
 
 

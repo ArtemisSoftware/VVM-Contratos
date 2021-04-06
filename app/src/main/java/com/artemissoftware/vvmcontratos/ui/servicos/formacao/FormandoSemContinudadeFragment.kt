@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.artemissoftware.vvmcontratos.R
 
 
-class FormacaoFragment : Fragment(R.layout.fragment_formacao) {
+class FormandoSemContinudadeFragment : Fragment(R.layout.fragment_formando_sem_continudade) {
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -18,5 +18,3 @@ class FormacaoFragment : Fragment(R.layout.fragment_formacao) {
     }
 
 }
-
-

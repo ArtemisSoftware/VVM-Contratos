@@ -96,4 +96,14 @@
     <string name="ref_campanhas">Ref. campanhas</string>
     <string name="data_emissao">Data de emissão:</string>
     <string name="valor_">Valor:</string>
+    <string name="formando">Formando</string>
+    <string name="nome">Nome</string>
+    <string name="nacionalidade">Nacionalidade</string>
+    <string name="profissao">Profissão</string>
+    <string name="posto">Posto</string>
+    <string name="tipificacao_profissao">Tipificação da profissão</string>
+    <string name="data_nascimento">Data de nascimento</string>
+    <string name="data_admissao">Data de admissão</string>
+    <string name="genero">Género</string>
+    <string name="clinica">Clinica</string>
 </resources>

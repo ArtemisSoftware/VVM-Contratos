@@ -367,9 +367,9 @@
                         android:layout_marginStart="24dp"
                         android:hint="@string/telemovel"
                         app:errorEnabled="true"
-                        app:layout_constraintStart_toEndOf="@+id/textview6"
-                        app:layout_constraintTop_toBottomOf="@+id/textview6"
-                        app:layout_constraintTop_toTopOf="@+id/textview6">
+                        app:layout_constraintStart_toEndOf="@+id/textview10"
+                        app:layout_constraintTop_toBottomOf="@+id/textview10"
+                        app:layout_constraintTop_toTopOf="@+id/textview10">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/txt_inp_telemovel"

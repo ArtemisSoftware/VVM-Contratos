@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.servicos.pagamentos.TpaDialogoFragment">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ecra">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textview1"
+            style="@style/parentView"
+            android:layout_width="400dp"
+            android:hint="@string/tpa"
+            app:errorEnabled="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_inp_id_tpa"
+                style="@style/texto.editavel"
+                android:enabled="false"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/texto"
+            android:layout_marginTop="24dp"
+            android:text="@string/deseja_atualizar_tpa"
+            app:layout_constraintStart_toStartOf="@+id/textview1"
+            app:layout_constraintTop_toBottomOf="@+id/textview1" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textview3"
+            style="@style/parentView"
+            android:layout_width="400dp"
+            android:layout_marginTop="24dp"
+            android:hint="@string/utilizador"
+            app:errorEnabled="true"
+            app:layout_constraintStart_toStartOf="@+id/textview1"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_inp_id_utilizador"
+                style="@style/texto.editavel"
+                android:enabled="false"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textview4"
+            style="@style/parentView"
+            android:layout_width="400dp"
+            android:layout_marginTop="24dp"
+            android:hint="@string/palavra_chave"
+            app:errorEnabled="true"
+            app:layout_constraintStart_toStartOf="@+id/textview1"
+            app:layout_constraintTop_toBottomOf="@+id/textview3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_inp_palavra_chave"
+                style="@style/texto.editavel"
+                android:inputType="numberPassword"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
+

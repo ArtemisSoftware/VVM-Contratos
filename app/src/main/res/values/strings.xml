@@ -106,4 +106,7 @@
     <string name="data_admissao">Data de admissão</string>
     <string name="genero">Género</string>
     <string name="clinica">Clinica</string>
+    <string name="deseja_atualizar_tpa">Deseja atualizar o identificador do TPA?</string>
+    <string name="utilizador">Utilizador</string>
+    <string name="palavra_chave">Palavra-chave</string>
 </resources>

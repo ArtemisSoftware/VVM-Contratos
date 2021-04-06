@@ -76,4 +76,21 @@
     <string name="n_serie">Nº Série</string>
     <string name="n_serie_">Nº Série:</string>
     <string name="manter">Manter</string>
+    <string name="pagamento">Pagamento</string>
+    <string name="data_pagamento">Data do pagamento</string>
+    <string name="tpa">TPA</string>
+    <string name="id_tpa">Id TPA</string>
+    <string name="per">PER</string>
+    <string name="tr">TR</string>
+    <string name="cheque_n_tb_sdd">Cheque Nº/TB/SDD</string>
+    <string name="banco">Banco</string>
+    <string name="codigo_produto">Código do produto</string>
+    <string name="valor_pagar_sem_iva">Valor a pagar s/IVA</string>
+    <string name="valor_referente_iva">Valor referente ao IVA</string>
+    <string name="completar_pagamento">Completar pagamento</string>
+    <string name="n_trabalhadores">Nº Trabalhadores</string>
+    <string name="valor_contrato_sem_iva">Valor contracto s/IVA</string>
+    <string name="producao">Produção</string>
+    <string name="tipo_actividade">Tipo atividade</string>
+    <string name="ref_campanhas">Ref. campanhas</string>
 </resources>

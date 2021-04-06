@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.servicos.ServicoRegistoFragment">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        style="@style/titulo.regular.bold"
+                        android:text="@string/servico"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view"
+                        style="@style/divisorHorizontal"
+                        android:layout_width="280dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/view">
+
+                        <TextView
+                            style="@style/texto.detalhe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/produto" />
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/spinner_produto"
+                            style="@style/texto"
+                            android:layout_width="500dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp" />
+
+                    </LinearLayout>
+
+
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout14"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/guideline"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_servico"
+                                    style="@style/texto.rotulo.descricao"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lorem_ipsum_numero" />
+
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:text="@string/servico"
+                                style="@style/texto.rotulo.titulo"
+                                android:layout_marginTop="5dp"/>
+
+                        </LinearLayout>
+
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintGuide_percent="0.85"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+
+                        <TextView
+                            style="@style/texto.rotulo.descricao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/lorem_ipsum_numero"
+                            app:layout_constraintBottom_toBottomOf="@+id/linearLayout14"
+                            app:layout_constraintStart_toStartOf="@+id/guideline"
+                            app:layout_constraintTop_toTopOf="@+id/linearLayout14" />
+
+
+                        <!--                        <at.markushi.ui.CircleButton-->
+                        <!--                            android:id="@+id/crl_btn_pesquisar_categorias_profissionais"-->
+                        <!--                            style="@style/btnPesquisa" />-->
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/constraint1">
+
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout15"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_iva"
+                                    style="@style/texto.rotulo.descricao"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lorem_ipsum_numero" />
+
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:text="@string/iva"
+                                style="@style/texto.rotulo.titulo"
+                                android:layout_marginTop="5dp"/>
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textview1"
+                        style="@style/parentView"
+                        android:hint="@string/unidades"
+                        android:layout_width="400dp"
+                        app:errorEnabled="true"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/constraint2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txt_inp_unidades"
+                            style="@style/texto.editavel"
+                            android:maxLength="3"
+                            android:inputType="number"
+                            android:maxLines="1"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textview2"
+                        style="@style/parentView"
+                        android:hint="@string/valor_total_sem_iva"
+                        android:layout_width="400dp"
+                        app:errorEnabled="true"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/textview1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txt_inp_valor_total"
+                            style="@style/texto.editavel"
+                            android:inputType="text"
+                            android:maxLines="1"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textview3"
+                        style="@style/parentView"
+                        android:layout_width="140dp"
+                        android:layout_marginStart="32dp"
+                        android:hint="@string/valor_unitario"
+                        app:errorEnabled="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/textview2"
+                        app:layout_constraintStart_toEndOf="@+id/textview2"
+                        app:layout_constraintTop_toTopOf="@+id/textview2">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txt_inp_valor_unitario"
+                            style="@style/texto.editavel"
+                            android:enabled="false"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/textview2">
+
+                        <TextView
+                            style="@style/texto.detalhe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/morada" />
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/spinner_morada"
+                            style="@style/texto"
+                            android:layout_width="500dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp" />
+
+                    </LinearLayout>
+
+
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout16"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_freguesia_localidade"
+                                    style="@style/texto.rotulo.descricao"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lorem_ipsum_numero" />
+
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:text="@string/freguesia_localidade"
+                                style="@style/texto.rotulo.titulo"
+                                android:layout_marginTop="5dp"/>
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/constraint3">
+
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout18"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_codigo_postal"
+                                    style="@style/texto.rotulo.descricao"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lorem_ipsum_numero" />
+
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:text="@string/codigo_postal"
+                                style="@style/texto.rotulo.titulo"
+                                android:layout_marginTop="5dp"/>
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/constraint4">
+
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout17"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_responsavel"
+                                    style="@style/texto.rotulo.descricao"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lorem_ipsum_numero" />
+
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:text="@string/responsavel"
+                                style="@style/texto.rotulo.titulo"
+                                android:layout_marginTop="5dp"/>
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_gravar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_launcher_foreground" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>
+

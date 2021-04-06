@@ -112,4 +112,9 @@
     <string name="local">Local</string>
     <string name="horario">Horário</string>
     <string name="tipo_formacao">Tipo de formação</string>
+    <string name="servico">Serviço</string>
+    <string name="produto">Produto</string>
+    <string name="unidades">Unidades</string>
+    <string name="valor_total_sem_iva">Valor total (s/IVA)</string>
+    <string name="valor_unitario">Valor unitário</string>
 </resources>

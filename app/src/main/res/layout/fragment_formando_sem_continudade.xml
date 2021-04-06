@@ -52,7 +52,7 @@
                     <TextView
                         android:id="@+id/textView18"
                         style="@style/titulo.regular.bold"
-                        android:text="@string/formando"
+                        android:text="@string/servico"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,6 +63,41 @@
                         android:layout_marginTop="8dp"
                         app:layout_constraintStart_toStartOf="@+id/textView18"
                         app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/view">
+
+                        <TextView
+                            style="@style/texto.detalhe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/produto" />
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/spinner_produto"
+                            style="@style/texto"
+                            android:layout_width="500dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp" />
+
+                    </LinearLayout>
+
+
+
+
+
+
+
 
 
 
@@ -89,29 +124,6 @@
 
 
 
-                    <LinearLayout
-                        android:id="@+id/linearLayout"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginTop="32dp"
-                        app:layout_constraintStart_toStartOf="@+id/textView18"
-                        app:layout_constraintTop_toBottomOf="@+id/textview1">
-
-                        <TextView
-                            style="@style/texto.detalhe"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/tipo_formacao" />
-
-                        <com.jaredrummler.materialspinner.MaterialSpinner
-                            android:id="@+id/spinner_tipo_formacao"
-                            style="@style/texto"
-                            android:layout_width="500dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp" />
-
-                    </LinearLayout>
 
 
 

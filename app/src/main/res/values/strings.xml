@@ -49,6 +49,7 @@
     <string name="unidades_">Unidades:</string>
     <string name="valor_unitario_">Valor unitário:</string>
     <string name="iva">Iva:</string>
+    <string name="iva_">Iva</string>
     <string name="total__sem_iva">Total (s/IVA)</string>
     <string name="opcoes_assinatura">Opções de assinatura</string>
     <string name="data_recolha_assinatura">Data da recolha da assinatura</string>
@@ -110,8 +111,11 @@
     <string name="utilizador">Utilizador</string>
     <string name="palavra_chave">Palavra-chave</string>
     <string name="local">Local</string>
+    <string name="local_">Local:</string>
     <string name="horario">Horário</string>
+    <string name="horario_">Horário:</string>
     <string name="tipo_formacao">Tipo de formação</string>
+    <string name="tipo_formacao_">Tipo de formação:</string>
     <string name="servico">Serviço</string>
     <string name="produto">Produto</string>
     <string name="unidades">Unidades</string>

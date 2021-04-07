@@ -101,10 +101,13 @@
     <string name="nome">Nome</string>
     <string name="nacionalidade">Nacionalidade</string>
     <string name="profissao">Profissão</string>
+    <string name="profissao_">Profissão:</string>
     <string name="posto">Posto</string>
     <string name="tipificacao_profissao">Tipificação da profissão</string>
     <string name="data_nascimento">Data de nascimento</string>
+    <string name="data_nascimento_">Data de nascimento:</string>
     <string name="data_admissao">Data de admissão</string>
+    <string name="data_admissao_">Data de admissão:</string>
     <string name="genero">Género</string>
     <string name="clinica">Clinica</string>
     <string name="deseja_atualizar_tpa">Deseja atualizar o identificador do TPA?</string>

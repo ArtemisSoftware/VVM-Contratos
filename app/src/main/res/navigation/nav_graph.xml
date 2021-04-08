@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/acordoFragment">
+
+    <fragment
+        android:id="@+id/acordoFragment"
+        android:name="com.artemissoftware.vvmcontratos.ui.acordo.AcordoFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_acordo" />
+    <fragment
+        android:id="@+id/clienteFragment"
+        android:name="com.artemissoftware.vvmcontratos.ui.cliente.ClienteFragment"
+        android:label="fragment_cliente"
+        tools:layout="@layout/fragment_cliente" />
+    <fragment
+        android:id="@+id/servicosFragment"
+        android:name="com.artemissoftware.vvmcontratos.ui.servicos.ServicosFragment"
+        android:label="fragment_servicos"
+        tools:layout="@layout/fragment_servicos" />
+    <fragment
+        android:id="@+id/observacaoFragment"
+        android:name="com.artemissoftware.vvmcontratos.ui.observacao.ObservacaoFragment"
+        android:label="fragment_observacao"
+        tools:layout="@layout/fragment_observacao" />
+    <fragment
+        android:id="@+id/reverConcluirFragment"
+        android:name="com.artemissoftware.vvmcontratos.ui.rever.ReverConcluirFragment"
+        android:label="fragment_rever_concluir"
+        tools:layout="@layout/fragment_rever_concluir" />
+</navigation>

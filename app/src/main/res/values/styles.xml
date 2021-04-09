@@ -166,4 +166,14 @@
     </style>
 
 
+    <!--  ############################ BOTAO #########################  -->
+
+
+    <style name="botaoRectangular" parent="wrapView">
+
+        <item name="android:buttonStyle">?attr/borderlessButtonStyle</item>
+
+    </style>
+
+
 </resources>

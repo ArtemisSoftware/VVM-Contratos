@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/clienteFragment"
+        android:icon="@drawable/ic_lorem_ipsum_24"
+        android:title="@string/cliente" />
+
+    <item
+        android:id="@+id/servicosFragment"
+        android:icon="@drawable/ic_lorem_ipsum_24"
+        android:title="@string/servicos" />
+
+</menu>

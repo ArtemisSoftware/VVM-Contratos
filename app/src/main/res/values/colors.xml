@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#435bd4</color>
-    <color name="colorPrimaryDark">#435bd4</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#D81B60</color>
 
 
+
+    <color name="cor_app_fundo">#2d3e61</color>
+    <color name="cor_app_cabecalho_1">#2d3e61</color>
+    <color name="cor_app_cabecalho_2">#818BA0</color>
 
 
     <color name="cor_texto">#070707</color>

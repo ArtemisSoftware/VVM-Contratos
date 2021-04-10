@@ -11,4 +11,15 @@
         android:icon="@drawable/ic_lorem_ipsum_24"
         android:title="@string/servicos" />
 
+
+    <item
+        android:id="@+id/observacaoFragment"
+        android:icon="@drawable/ic_lorem_ipsum_24"
+        android:title="@string/observacao" />
+
+    <item
+        android:id="@+id/reverConcluirFragment"
+        android:icon="@drawable/ic_lorem_ipsum_24"
+        android:title="@string/rever_concluir" />
+
 </menu>

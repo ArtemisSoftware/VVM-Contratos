@@ -27,48 +27,53 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        //appBarConfiguration = AppBarConfiguration(setOf(R.id.clienteFragment, R.id.observacaoFragment))
         appBarConfiguration = AppBarConfiguration(navController.graph)
 
-        setSupportActionBar(toolbar)
         setupActionBarWithNavController(navController, appBarConfiguration)
-        //toolbar.setupWithNavController(navController, appBarConfiguration)
 
+//        setSupportActionBar(toolbar)
+//        setupActionBarWithNavController(navController, appBarConfiguration)
+
+        //possivel alternativa
         navController.addOnDestinationChangedListener { _, destination, _ ->
             if(destination.id == R.id.acordoFragment) {
 
                 bottom_nav.visibility = View.GONE
             } else {
-                toolbar.visibility = View.VISIBLE
+                bottom_nav.visibility = View.VISIBLE
             }
         }
 
-        //possivel alternativa
+
 //https://stackoverflow.com/questions/62551658/hide-bottom-navigation-view-in-fragment
+        //---
         bottom_nav.setupWithNavController(navController)
+
+
+
     }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.main_menu, menu)
-        return true
-    }
-
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        return if (item.itemId == R.id.clienteFragment) {
-//            val action = NavGraphDirections.actionGlobalTermsFragment()
-//            navController.navigate(action)
-//            true
-//        } else {
-//            item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
-//        }
-        return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
-    }
-
-
-    override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-    }
+//
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        val inflater: MenuInflater = menuInflater
+//        inflater.inflate(R.menu.main_menu, menu)
+//        return true
+//    }
+//
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+////        return if (item.itemId == R.id.clienteFragment) {
+////            val action = NavGraphDirections.actionGlobalTermsFragment()
+////            navController.navigate(action)
+////            true
+////        } else {
+////            item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+////        }
+//        return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+//    }
+//
+//
+//    override fun onSupportNavigateUp(): Boolean {
+//        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+//    }
 
 }

@@ -1,446 +1,476 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/root"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.acordo.AcordoFragment"
-    style="@style/ecra">
+    android:fitsSystemWindows="true"
+    tools:context=".ui.acordo.AcordoFragment">
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:theme="@style/AppTheme.AppBarOverlay">-->
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/colorPrimary"-->
+<!--            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_width="440dp"
-            android:layout_height="580dp"
-            android:background="@drawable/white_cueve_bg"
-            android:backgroundTint="@color/colorPrimary"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="434dp"
-            android:layout_height="574dp"
-            android:background="@drawable/white_cueve_bg"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <TextView
-            android:id="@+id/textview1"
-            style="@style/titulo.regular.bold"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:text="@string/novo_contrato"
-            app:layout_constraintStart_toStartOf="@+id/imageView1"
-            app:layout_constraintTop_toTopOf="@+id/imageView1" />
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
-            android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
-            android:hint="@string/nif"
-            app:errorEnabled="true"
-            app:layout_constraintStart_toStartOf="@+id/textview1"
-            app:layout_constraintTop_toBottomOf="@+id/textview1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/texto.editavel"
-                android:inputType="number"
-                android:maxLines="1" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="@+id/view"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
-
-            <TextView
-                style="@style/texto.detalhe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tipo_contrato" />
-
-            <com.jaredrummler.materialspinner.MaterialSpinner
-                android:id="@+id/spinner_tipo_contrato"
-                style="@style/texto"
-                android:layout_width="360dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp" />
-
-        </LinearLayout>
-
-
-        <TextView
-            android:id="@+id/txt_mensagem_agenda"
-            style="@style/texto"
-            android:layout_marginTop="24dp"
-            android:text="@string/contrato_iniciado_agenda"
-            android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="@+id/view"
-            app:layout_constraintStart_toStartOf="@+id/textview1"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_validar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
-            style="?attr/borderlessButtonStyle"
-            android:backgroundTint="@color/cor_botao"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:text="@string/validar"
-            android:textColor="@color/cor_texto_branco"
-            app:icon="@drawable/ic_validar_24"
-            app:layout_constraintEnd_toEndOf="@+id/view"
-            app:layout_constraintStart_toStartOf="@+id/txt_mensagem_agenda"
-            app:layout_constraintTop_toBottomOf="@+id/txt_mensagem_agenda" />
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.acordo.AcordoFragment"
+        style="@style/ecra">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraint_iniciar_contrato"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:visibility="gone"
-            app:layout_constraintStart_toStartOf="@+id/textview1"
-            app:layout_constraintTop_toBottomOf="@+id/btn_validar">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-
-            <TextView
-                android:id="@+id/txt_tipo_cliente"
-                style="@style/texto"
-                android:text="@string/contrato_iniciado_agenda"
+            <ImageView
+                android:layout_width="440dp"
+                android:layout_height="580dp"
+                android:background="@drawable/white_cueve_bg"
+                android:backgroundTint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraint1"
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="434dp"
+                android:layout_height="574dp"
+                android:background="@drawable/white_cueve_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textview1"
+                style="@style/titulo.regular.bold"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/novo_contrato"
+                app:layout_constraintStart_toStartOf="@+id/imageView1"
+                app:layout_constraintTop_toTopOf="@+id/imageView1" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:hint="@string/nif"
+                app:errorEnabled="true"
+                app:layout_constraintStart_toStartOf="@+id/textview1"
+                app:layout_constraintTop_toBottomOf="@+id/textview1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/texto.editavel"
+                    android:inputType="number"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                app:layout_constraintStart_toStartOf="@+id/txt_tipo_cliente"
-                app:layout_constraintTop_toBottomOf="@+id/txt_tipo_cliente">
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
-                <LinearLayout
-                    android:id="@+id/linearLayout1"
+                <TextView
+                    style="@style/texto.detalhe"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:text="@string/tipo_contrato" />
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/spinner_tipo_contrato"
+                    style="@style/texto"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txt_mensagem_agenda"
+                style="@style/texto"
+                android:layout_marginTop="24dp"
+                android:text="@string/contrato_iniciado_agenda"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintStart_toStartOf="@+id/textview1"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_validar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                style="?attr/borderlessButtonStyle"
+                android:backgroundTint="@color/cor_botao"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/validar"
+                android:textColor="@color/cor_texto_branco"
+                app:icon="@drawable/ic_validar_24"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintStart_toStartOf="@+id/txt_mensagem_agenda"
+                app:layout_constraintTop_toBottomOf="@+id/txt_mensagem_agenda" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_iniciar_contrato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/textview1"
+                app:layout_constraintTop_toBottomOf="@+id/btn_validar">
+
+
+                <TextView
+                    android:id="@+id/txt_tipo_cliente"
+                    style="@style/texto"
+                    android:text="@string/contrato_iniciado_agenda"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <TextView
-                        style="@style/texto.detalhe"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/empresa" />
-
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:id="@+id/spinner_empresa"
-                        style="@style/texto"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp" />
-
-                </LinearLayout>
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
-                <LinearLayout
-                    android:id="@+id/linearLayout2"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:orientation="vertical"
-                    app:layout_constraintBottom_toBottomOf="@+id/linearLayout1"
-                    app:layout_constraintStart_toEndOf="@+id/linearLayout1"
-                    app:layout_constraintTop_toTopOf="@+id/linearLayout1">
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="@+id/txt_tipo_cliente"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_tipo_cliente">
 
-                    <TextView
-                        style="@style/texto.detalhe"
+                    <LinearLayout
+                        android:id="@+id/linearLayout1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/marca" />
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:id="@+id/spinner_marca"
-                        style="@style/texto"
-                        android:layout_width="200dp"
+                        <TextView
+                            style="@style/texto.detalhe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empresa" />
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/spinner_empresa"
+                            style="@style/texto"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp" />
+                        android:layout_marginStart="32dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/linearLayout1"
+                        app:layout_constraintStart_toEndOf="@+id/linearLayout1"
+                        app:layout_constraintTop_toTopOf="@+id/linearLayout1">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/texto.detalhe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/marca" />
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/spinner_marca"
+                            style="@style/texto"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp" />
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_iniciar"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:backgroundTint="@color/cor_botao"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/iniciar"
+                    android:textColor="@color/cor_texto_branco"
+                    app:icon="@drawable/ic_comecar_contrato_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txt_tipo_cliente"
+                    app:layout_constraintTop_toBottomOf="@+id/constraint1" />
+
+
+                <!--        <ImageView-->
+                <!--            android:id="@+id/img_logo"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_alignParentLeft="true"-->
+                <!--            android:layout_centerVertical="true"-->
+                <!--            android:src="@drawable/logo_vivamais"-->
+                <!--            app:layout_constraintStart_toStartOf="parent"-->
+                <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+                <!--        <TextView-->
+                <!--            style="@style/texto"-->
+                <!--            android:text="@string/novo_contrato"-->
+                <!--            app:layout_constraintBottom_toBottomOf="@+id/img_logo"-->
+                <!--            app:layout_constraintEnd_toEndOf="parent"-->
+                <!--            app:layout_constraintTop_toTopOf="@+id/img_logo" />-->
+
+
+                <!--        <View-->
+                <!--            android:id="@+id/view"-->
+                <!--            style="@style/divisorHorizontal"-->
+                <!--            android:layout_marginTop="8dp"-->
+                <!--            app:layout_constraintEnd_toEndOf="parent"-->
+                <!--            app:layout_constraintStart_toStartOf="parent"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/img_logo" />-->
+
+
+                <!--        <com.google.android.material.textfield.TextInputLayout-->
+                <!--            android:id="@+id/textInputLayout"-->
+                <!--            android:layout_width="300dp"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_marginTop="44dp"-->
+                <!--            android:hint="@string/nif"-->
+                <!--            app:errorEnabled="true"-->
+                <!--            app:layout_constraintEnd_toEndOf="@+id/view"-->
+                <!--            app:layout_constraintStart_toStartOf="@+id/view"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/view">-->
+
+                <!--            <com.google.android.material.textfield.TextInputEditText-->
+                <!--                style="@style/texto.editavel"-->
+                <!--                android:inputType="number"-->
+                <!--                android:maxLines="1" />-->
+
+                <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                <!--        <LinearLayout-->
+                <!--            android:id="@+id/linearLayout"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_marginTop="32dp"-->
+                <!--            android:orientation="vertical"-->
+                <!--            app:layout_constraintEnd_toEndOf="@+id/view"-->
+                <!--            app:layout_constraintStart_toStartOf="@+id/view"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">-->
+
+                <!--            <TextView-->
+                <!--                style="@style/texto.detalhe"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:text="@string/tipo_contrato" />-->
+
+                <!--            <com.jaredrummler.materialspinner.MaterialSpinner-->
+                <!--                android:id="@+id/spinner_tipo_contrato"-->
+                <!--                style="@style/texto"-->
+                <!--                android:layout_width="300dp"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="8dp" />-->
+
+                <!--        </LinearLayout>-->
+
+
+                <!--        <TextView-->
+                <!--            android:id="@+id/txt_mensagem_agenda"-->
+                <!--            android:visibility="gone"-->
+                <!--            style="@style/texto"-->
+                <!--            android:layout_marginTop="24dp"-->
+                <!--            android:text="@string/contrato_iniciado_agenda"-->
+                <!--            app:layout_constraintEnd_toEndOf="@+id/view"-->
+                <!--            app:layout_constraintStart_toStartOf="@+id/view"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />-->
+
+
+                <!--        <com.google.android.material.button.MaterialButton-->
+                <!--            android:id="@+id/btn_validar"-->
+                <!--            style="?attr/borderlessButtonStyle"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_marginTop="44dp"-->
+                <!--            android:backgroundTint="@color/cor_botao"-->
+                <!--            android:paddingLeft="20dp"-->
+                <!--            android:paddingRight="20dp"-->
+                <!--            android:text="@string/validar"-->
+                <!--            android:textColor="@color/cor_texto_branco"-->
+                <!--            app:icon="@drawable/ic_validar_24"-->
+                <!--            app:layout_constraintEnd_toEndOf="@+id/view"-->
+                <!--            app:layout_constraintStart_toStartOf="@+id/view"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/txt_mensagem_agenda" />-->
+
+
+                <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--            android:id="@+id/constraint_iniciar_contrato"-->
+                <!--            android:visibility="gone"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_marginTop="24dp"-->
+                <!--            app:layout_constraintEnd_toEndOf="@+id/view"-->
+                <!--            app:layout_constraintStart_toStartOf="@+id/view"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/btn_validar">-->
+
+
+                <!--            <TextView-->
+                <!--                android:id="@+id/txt_tipo_cliente"-->
+                <!--                style="@style/texto"-->
+                <!--                android:text="@string/contrato_iniciado_agenda"-->
+                <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                app:layout_constraintStart_toStartOf="parent"-->
+                <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+
+                <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                android:id="@+id/constraint1"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="32dp"-->
+                <!--                app:layout_constraintEnd_toEndOf="@+id/txt_tipo_cliente"-->
+                <!--                app:layout_constraintStart_toStartOf="@+id/txt_tipo_cliente"-->
+                <!--                app:layout_constraintTop_toBottomOf="@+id/txt_tipo_cliente">-->
+
+                <!--                <LinearLayout-->
+                <!--                    android:id="@+id/linearLayout1"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="vertical"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+                <!--                    <TextView-->
+                <!--                        style="@style/texto.detalhe"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="@string/empresa" />-->
+
+                <!--                    <com.jaredrummler.materialspinner.MaterialSpinner-->
+                <!--                        android:id="@+id/spinner_empresa"-->
+                <!--                        style="@style/texto"-->
+                <!--                        android:layout_width="200dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginTop="8dp" />-->
+
+                <!--                </LinearLayout>-->
+
+
+                <!--                <LinearLayout-->
+                <!--                    android:id="@+id/linearLayout2"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="32dp"-->
+                <!--                    android:orientation="vertical"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="@+id/linearLayout1"-->
+                <!--                    app:layout_constraintStart_toEndOf="@+id/linearLayout1"-->
+                <!--                    app:layout_constraintTop_toTopOf="@+id/linearLayout1">-->
+
+                <!--                    <TextView-->
+                <!--                        style="@style/texto.detalhe"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="@string/marca" />-->
+
+                <!--                    <com.jaredrummler.materialspinner.MaterialSpinner-->
+                <!--                        android:id="@+id/spinner_marca"-->
+                <!--                        style="@style/texto"-->
+                <!--                        android:layout_width="200dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginTop="8dp" />-->
+
+                <!--                </LinearLayout>-->
+
+
+                <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+                <!--            <com.google.android.material.button.MaterialButton-->
+                <!--                android:id="@+id/btn_iniciar"-->
+                <!--                style="?attr/borderlessButtonStyle"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="32dp"-->
+                <!--                android:backgroundTint="@color/cor_botao"-->
+                <!--                android:paddingLeft="20dp"-->
+                <!--                android:paddingRight="20dp"-->
+                <!--                android:text="@string/iniciar"-->
+                <!--                android:textColor="@color/cor_texto_branco"-->
+                <!--                app:icon="@drawable/ic_comecar_contrato_24"-->
+                <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                app:layout_constraintEnd_toEndOf="@+id/txt_tipo_cliente"-->
+                <!--                app:layout_constraintStart_toStartOf="@+id/txt_tipo_cliente"-->
+                <!--                app:layout_constraintTop_toBottomOf="@+id/constraint1" />-->
+
+
+                <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                <!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_marginTop="16dp"-->
+                <!--            android:layout_marginEnd="8dp"-->
+                <!--            android:layout_marginBottom="8dp"-->
+                <!--            android:background="@drawable/fab_negativo"-->
+                <!--            android:src="@drawable/ic_launcher_foreground"-->
+                <!--            app:backgroundTint="@android:color/white"-->
+                <!--            app:borderWidth="0dp"-->
+                <!--            app:fabSize="normal"-->
+                <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--            app:layout_constraintEnd_toEndOf="parent"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/constraint_iniciar_contrato"-->
+                <!--            app:pressedTranslationZ="12dp"-->
+                <!--            app:rippleColor="@android:color/black" />-->
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_iniciar"
-                style="?attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:backgroundTint="@color/cor_botao"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:text="@string/iniciar"
-                android:textColor="@color/cor_texto_branco"
-                app:icon="@drawable/ic_comecar_contrato_24"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/txt_tipo_cliente"
-                app:layout_constraintTop_toBottomOf="@+id/constraint1" />
-
-
-            <!--        <ImageView-->
-            <!--            android:id="@+id/img_logo"-->
-            <!--            android:layout_width="wrap_content"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_alignParentLeft="true"-->
-            <!--            android:layout_centerVertical="true"-->
-            <!--            android:src="@drawable/logo_vivamais"-->
-            <!--            app:layout_constraintStart_toStartOf="parent"-->
-            <!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-
-            <!--        <TextView-->
-            <!--            style="@style/texto"-->
-            <!--            android:text="@string/novo_contrato"-->
-            <!--            app:layout_constraintBottom_toBottomOf="@+id/img_logo"-->
-            <!--            app:layout_constraintEnd_toEndOf="parent"-->
-            <!--            app:layout_constraintTop_toTopOf="@+id/img_logo" />-->
-
-
-            <!--        <View-->
-            <!--            android:id="@+id/view"-->
-            <!--            style="@style/divisorHorizontal"-->
-            <!--            android:layout_marginTop="8dp"-->
-            <!--            app:layout_constraintEnd_toEndOf="parent"-->
-            <!--            app:layout_constraintStart_toStartOf="parent"-->
-            <!--            app:layout_constraintTop_toBottomOf="@+id/img_logo" />-->
-
-
-            <!--        <com.google.android.material.textfield.TextInputLayout-->
-            <!--            android:id="@+id/textInputLayout"-->
-            <!--            android:layout_width="300dp"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_marginTop="44dp"-->
-            <!--            android:hint="@string/nif"-->
-            <!--            app:errorEnabled="true"-->
-            <!--            app:layout_constraintEnd_toEndOf="@+id/view"-->
-            <!--            app:layout_constraintStart_toStartOf="@+id/view"-->
-            <!--            app:layout_constraintTop_toBottomOf="@+id/view">-->
-
-            <!--            <com.google.android.material.textfield.TextInputEditText-->
-            <!--                style="@style/texto.editavel"-->
-            <!--                android:inputType="number"-->
-            <!--                android:maxLines="1" />-->
-
-            <!--        </com.google.android.material.textfield.TextInputLayout>-->
-
-
-            <!--        <LinearLayout-->
-            <!--            android:id="@+id/linearLayout"-->
-            <!--            android:layout_width="wrap_content"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_marginTop="32dp"-->
-            <!--            android:orientation="vertical"-->
-            <!--            app:layout_constraintEnd_toEndOf="@+id/view"-->
-            <!--            app:layout_constraintStart_toStartOf="@+id/view"-->
-            <!--            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">-->
-
-            <!--            <TextView-->
-            <!--                style="@style/texto.detalhe"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:text="@string/tipo_contrato" />-->
-
-            <!--            <com.jaredrummler.materialspinner.MaterialSpinner-->
-            <!--                android:id="@+id/spinner_tipo_contrato"-->
-            <!--                style="@style/texto"-->
-            <!--                android:layout_width="300dp"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_marginTop="8dp" />-->
-
-            <!--        </LinearLayout>-->
-
-
-            <!--        <TextView-->
-            <!--            android:id="@+id/txt_mensagem_agenda"-->
-            <!--            android:visibility="gone"-->
-            <!--            style="@style/texto"-->
-            <!--            android:layout_marginTop="24dp"-->
-            <!--            android:text="@string/contrato_iniciado_agenda"-->
-            <!--            app:layout_constraintEnd_toEndOf="@+id/view"-->
-            <!--            app:layout_constraintStart_toStartOf="@+id/view"-->
-            <!--            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />-->
-
-
-            <!--        <com.google.android.material.button.MaterialButton-->
-            <!--            android:id="@+id/btn_validar"-->
-            <!--            style="?attr/borderlessButtonStyle"-->
-            <!--            android:layout_width="wrap_content"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_marginTop="44dp"-->
-            <!--            android:backgroundTint="@color/cor_botao"-->
-            <!--            android:paddingLeft="20dp"-->
-            <!--            android:paddingRight="20dp"-->
-            <!--            android:text="@string/validar"-->
-            <!--            android:textColor="@color/cor_texto_branco"-->
-            <!--            app:icon="@drawable/ic_validar_24"-->
-            <!--            app:layout_constraintEnd_toEndOf="@+id/view"-->
-            <!--            app:layout_constraintStart_toStartOf="@+id/view"-->
-            <!--            app:layout_constraintTop_toBottomOf="@+id/txt_mensagem_agenda" />-->
-
-
-            <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-            <!--            android:id="@+id/constraint_iniciar_contrato"-->
-            <!--            android:visibility="gone"-->
-            <!--            android:layout_width="wrap_content"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_marginTop="24dp"-->
-            <!--            app:layout_constraintEnd_toEndOf="@+id/view"-->
-            <!--            app:layout_constraintStart_toStartOf="@+id/view"-->
-            <!--            app:layout_constraintTop_toBottomOf="@+id/btn_validar">-->
-
-
-            <!--            <TextView-->
-            <!--                android:id="@+id/txt_tipo_cliente"-->
-            <!--                style="@style/texto"-->
-            <!--                android:text="@string/contrato_iniciado_agenda"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                app:layout_constraintStart_toStartOf="parent"-->
-            <!--                app:layout_constraintTop_toTopOf="parent" />-->
-
-
-            <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-            <!--                android:id="@+id/constraint1"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_marginTop="32dp"-->
-            <!--                app:layout_constraintEnd_toEndOf="@+id/txt_tipo_cliente"-->
-            <!--                app:layout_constraintStart_toStartOf="@+id/txt_tipo_cliente"-->
-            <!--                app:layout_constraintTop_toBottomOf="@+id/txt_tipo_cliente">-->
-
-            <!--                <LinearLayout-->
-            <!--                    android:id="@+id/linearLayout1"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:orientation="vertical"-->
-            <!--                    app:layout_constraintStart_toStartOf="parent"-->
-            <!--                    app:layout_constraintTop_toTopOf="parent">-->
-
-            <!--                    <TextView-->
-            <!--                        style="@style/texto.detalhe"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:text="@string/empresa" />-->
-
-            <!--                    <com.jaredrummler.materialspinner.MaterialSpinner-->
-            <!--                        android:id="@+id/spinner_empresa"-->
-            <!--                        style="@style/texto"-->
-            <!--                        android:layout_width="200dp"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:layout_marginTop="8dp" />-->
-
-            <!--                </LinearLayout>-->
-
-
-            <!--                <LinearLayout-->
-            <!--                    android:id="@+id/linearLayout2"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:layout_marginStart="32dp"-->
-            <!--                    android:orientation="vertical"-->
-            <!--                    app:layout_constraintBottom_toBottomOf="@+id/linearLayout1"-->
-            <!--                    app:layout_constraintStart_toEndOf="@+id/linearLayout1"-->
-            <!--                    app:layout_constraintTop_toTopOf="@+id/linearLayout1">-->
-
-            <!--                    <TextView-->
-            <!--                        style="@style/texto.detalhe"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:text="@string/marca" />-->
-
-            <!--                    <com.jaredrummler.materialspinner.MaterialSpinner-->
-            <!--                        android:id="@+id/spinner_marca"-->
-            <!--                        style="@style/texto"-->
-            <!--                        android:layout_width="200dp"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:layout_marginTop="8dp" />-->
-
-            <!--                </LinearLayout>-->
-
-
-            <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-
-            <!--            <com.google.android.material.button.MaterialButton-->
-            <!--                android:id="@+id/btn_iniciar"-->
-            <!--                style="?attr/borderlessButtonStyle"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_marginTop="32dp"-->
-            <!--                android:backgroundTint="@color/cor_botao"-->
-            <!--                android:paddingLeft="20dp"-->
-            <!--                android:paddingRight="20dp"-->
-            <!--                android:text="@string/iniciar"-->
-            <!--                android:textColor="@color/cor_texto_branco"-->
-            <!--                app:icon="@drawable/ic_comecar_contrato_24"-->
-            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--                app:layout_constraintEnd_toEndOf="@+id/txt_tipo_cliente"-->
-            <!--                app:layout_constraintStart_toStartOf="@+id/txt_tipo_cliente"-->
-            <!--                app:layout_constraintTop_toBottomOf="@+id/constraint1" />-->
-
-
-            <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-            <!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-            <!--            android:layout_width="wrap_content"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_marginTop="16dp"-->
-            <!--            android:layout_marginEnd="8dp"-->
-            <!--            android:layout_marginBottom="8dp"-->
-            <!--            android:background="@drawable/fab_negativo"-->
-            <!--            android:src="@drawable/ic_launcher_foreground"-->
-            <!--            app:backgroundTint="@android:color/white"-->
-            <!--            app:borderWidth="0dp"-->
-            <!--            app:fabSize="normal"-->
-            <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--            app:layout_constraintEnd_toEndOf="parent"-->
-            <!--            app:layout_constraintTop_toBottomOf="@+id/constraint_iniciar_contrato"-->
-            <!--            app:pressedTranslationZ="12dp"-->
-            <!--            app:rippleColor="@android:color/black" />-->
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

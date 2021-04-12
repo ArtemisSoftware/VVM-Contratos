@@ -11,13 +11,13 @@ interface ContratosApi {
 
 
     @GET("Obter_DadosCliente")
-    suspend fun getAllProducts(@Path("nif") nif :String, @Path("MessageDigest")  messageDigest : String): DadosClienteDto
+    suspend fun obterDadosCliente(@Path("nif") nif :String, @Path("MessageDigest") messageDigest : String): DadosClienteDto
 
     @GET("Obter_DadosMoradasCliente")
-    suspend fun getProductsByBrand(@Path("nif")  nif :String, @Path("empresa")  empresa : String, @Path("MessageDigest")  messageDigest : String): MoradaDto
+    suspend fun obterMoradasCliente(@Path("nif") nif :String, @Path("empresa") empresa : String, @Path("MessageDigest") messageDigest : String): MoradaDto
 
     @GET("Obter_NumeroContrato")
-    suspend fun getProductsByType(@Query("empresa")  empresa :String, @Path("marca")  marca : String, @Path("MessageDigest")  messageDigest : String): NumeroContratoDto
+    suspend fun obterNumeroContrato(@Query("empresa") empresa :String, @Path("marca") marca : String, @Path("MessageDigest") messageDigest : String): NumeroContratoDto
 
 
     companion object{

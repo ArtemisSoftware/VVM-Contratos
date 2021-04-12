@@ -16,7 +16,7 @@
     <string name="novo_contrato">Novo contrato</string>
     <string name="dados_contratos">Dados do contrato</string>
     <string name="nif">Nif</string>
-    <string name="tipo_contrato">Tipo contrato</string>
+    <string name="tipo_contrato">Tipo de contrato</string>
     <string name="contrato_iniciado_agenda">Contrato iniciado na agenda</string>
     <string name="validar">Validar</string>
     <string name="iniciar">Iniciar</string>
@@ -125,4 +125,5 @@
     <string name="valor_total_sem_iva">Valor total (s/IVA)</string>
     <string name="valor_unitario">Valor unitário</string>
     <string name="servicos">Serviços</string>
+    <string name="contrato">Contrato</string>
 </resources>

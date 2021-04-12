@@ -74,7 +74,7 @@
                 style="@style/titulo.regular.bold"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
-                android:text="@string/novo_contrato"
+                android:text="@string/contrato"
                 app:layout_constraintStart_toStartOf="@+id/imageView1"
                 app:layout_constraintTop_toTopOf="@+id/imageView1" />
 

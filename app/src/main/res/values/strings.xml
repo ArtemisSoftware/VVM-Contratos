@@ -126,4 +126,7 @@
     <string name="valor_unitario">Valor unitário</string>
     <string name="servicos">Serviços</string>
     <string name="contrato">Contrato</string>
+    <string name="numero_tipos_">Número de tipos:</string>
+    <string name="numero_detalhes_">Número de detalhes:</string>
+    <string name="ultima_atualizacao_">Última atualização:</string>
 </resources>

@@ -1,7 +1,7 @@
 package com.artemissoftware.vvmcontratos.api.modelos.pedido
 
 
-import com.artemissoftware.vvmcontratos.api.modelos.BaseListagem
+import com.artemissoftware.vvmcontratos.api.modelos.BaseListagemDto
 import com.google.gson.annotations.SerializedName
 
 data class TipoDto(
@@ -50,4 +50,23 @@ data class TipoDto(
 
 )
 
-class TipoListagemDto : BaseListagem<TipoDto>()
+data class TipoListagemDto<TipoDto>(
+
+    @SerializedName("TimeStamp")
+    val seloTemporal: String,
+
+    @SerializedName("metodo")
+    val metodo: String,
+
+
+    @SerializedName(value = "dadosNovos", alternate = ["Novos", "UtilizadoresNovos"])
+    val dadosNovos: List<TipoDto>,
+
+    @SerializedName(value = "dadosAlterados", alternate = ["Alterados", "UtilizadoresAlterados"])
+    val dadosAlterados: List<TipoDto>
+
+)
+
+//open class TipoListagemDto(seloTemporal: String,
+//                           metodo: String, dadosNovos: List<TipoDto>, dadosAlterados: List<TipoDto>
+//) : BaseListagemDto<TipoDto>(seloTemporal, metodo, dadosNovos, dadosAlterados)

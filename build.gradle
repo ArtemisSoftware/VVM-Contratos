@@ -26,3 +26,12 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+
+// Define versions in a single place
+ext {
+
+    // App dependencies
+
+    retrofitVersion = '2.9.0'
+}

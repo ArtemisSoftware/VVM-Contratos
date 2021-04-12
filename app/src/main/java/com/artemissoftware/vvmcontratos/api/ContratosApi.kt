@@ -1,8 +1,8 @@
 package com.artemissoftware.vvmcontratos.api
 
-import com.artemissoftware.vvmcontratos.api.modelos.DadosClienteDto
-import com.artemissoftware.vvmcontratos.api.modelos.MoradaDto
-import com.artemissoftware.vvmcontratos.api.modelos.NumeroContratoDto
+import com.artemissoftware.vvmcontratos.api.modelos.pedido.DadosClienteDto
+import com.artemissoftware.vvmcontratos.api.modelos.pedido.MoradaDto
+import com.artemissoftware.vvmcontratos.api.modelos.pedido.NumeroContratoDto
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

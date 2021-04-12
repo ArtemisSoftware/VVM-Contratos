@@ -1,4 +1,4 @@
-package com.artemissoftware.vvmcontratos.api.modelos
+package com.artemissoftware.vvmcontratos.api.modelos.pedido
 
 
 import com.google.gson.annotations.SerializedName

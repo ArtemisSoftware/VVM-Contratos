@@ -6,13 +6,13 @@ import com.google.gson.annotations.SerializedName
 data class DadosClienteDto(
 
     @SerializedName("Dados")
-    val dados: List<Dado>,
+    val clientes: List<ClienteDto>,
 
     @SerializedName("TimeStamp")
     val timeStamp: String
 )
 
-data class Dado(
+data class ClienteDto(
 
     @SerializedName("Actividade")
     val actividadeCae: String,

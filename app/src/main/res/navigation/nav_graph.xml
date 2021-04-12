@@ -30,4 +30,22 @@
         android:name="com.artemissoftware.vvmcontratos.ui.rever.ReverConcluirFragment"
         android:label="fragment_rever_concluir"
         tools:layout="@layout/fragment_rever_concluir" />
+    <fragment
+        android:id="@+id/opcoesAvancadasFragment"
+        android:name="com.artemissoftware.vvmcontratos.ui.definicoes.OpcoesAvancadasFragment"
+        android:label="fragment_opcoes_avancadas"
+        tools:layout="@layout/fragment_opcoes_avancadas" >
+        <action
+            android:id="@+id/action_opcoesAvancadasFragment_to_tiposFragment"
+            app:destination="@id/tiposFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tiposFragment"
+        android:name="com.artemissoftware.vvmcontratos.ui.definicoes.TiposFragment"
+        android:label="fragment_tipos"
+        tools:layout="@layout/fragment_tipos" />
+    <fragment
+        android:id="@+id/definicoesFragment"
+        android:name="com.artemissoftware.vvmcontratos.ui.definicoes.DefinicoesFragment"
+        android:label="DefinicoesFragment" />
 </navigation>

@@ -1,0 +1,33 @@
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.definicoes.DefinicoesFragment">
+
+
+    <PreferenceCategory app:title="@string/configuracao">
+
+        <Preference
+            app:key="@string/key_permissoes"
+            app:title="@string/permissoes"
+            app:summary="@string/lorem_ipsum_texto"/>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory app:title="@string/aplicacao">
+
+
+        <Preference
+            app:key="@string/key_versao_app"
+            app:title="@string/versao"
+            app:summary="@string/lorem_ipsum_numero"/>
+
+
+        <Preference
+            app:key="@string/key_ultima_atualizacao"
+            app:title="@string/ultima_atualizacao"
+            app:summary="@string/lorem_ipsum_data"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

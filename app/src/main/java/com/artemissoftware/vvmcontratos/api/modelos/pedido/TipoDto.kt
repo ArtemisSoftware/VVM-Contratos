@@ -1,7 +1,6 @@
 package com.artemissoftware.vvmcontratos.api.modelos.pedido
 
 
-import com.artemissoftware.vvmcontratos.api.modelos.BaseListagemDto
 import com.google.gson.annotations.SerializedName
 
 data class TipoDto(

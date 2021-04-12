@@ -139,4 +139,27 @@
     <string name="teste">Teste</string>
     <string name="importar">Importar</string>
     <string name="importar_base_dados">Importar base de dados</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="configuracao">Configuração</string>
+    <string name="permissoes">Permissões</string>
+    <string name="key_permissoes">permissoes</string>
+    <string name="aplicacao">Aplicação</string>
+    <string name="versao">Versão</string>
+    <string name="ultima_atualizacao">Última atualização</string>
+    <string name="key_versao_app">versao</string>
+    <string name="key_ultima_atualizacao">atualizacao</string>
+    <string name="definicoes">Definições</string>
 </resources>

@@ -16,9 +16,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class ClienteFragment : Fragment(R.layout.fragment_cliente) {
 
+    private lateinit var navController: NavController
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        navController = findNavController()
         setHasOptionsMenu(true)
     }
 
@@ -28,4 +30,14 @@ class ClienteFragment : Fragment(R.layout.fragment_cliente) {
 
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        return if (item.itemId == R.id.clienteFragment) {
+//            val action = NavGraphDirections.actionGlobalTermsFragment()
+//            navController.navigate(action)
+//            true
+//        } else {
+//            item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+//        }
+        return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+    }
 }

@@ -129,4 +129,14 @@
     <string name="numero_tipos_">Número de tipos:</string>
     <string name="numero_detalhes_">Número de detalhes:</string>
     <string name="ultima_atualizacao_">Última atualização:</string>
+    <string name="opcoes_avancadas">Opções avançadas</string>
+    <string name="tipos">Tipos</string>
+    <string name="gerir_tipos">Gerir tipos</string>
+    <string name="dados">Dados</string>
+    <string name="exportar_base_dados">Exportar base de dados</string>
+    <string name="email_pdf">Enviar email com pdf</string>
+    <string name="pdf">Pdf</string>
+    <string name="teste">Teste</string>
+    <string name="importar">Importar</string>
+    <string name="importar_base_dados">Importar base de dados</string>
 </resources>

@@ -8,7 +8,7 @@ open class BaseDto (
     val metodo: String
 )
 
-open class BaseListagemDto<T>(
+data class ListagemDto<T>(
 
     @SerializedName("TimeStamp")
     val seloTemporal: String,

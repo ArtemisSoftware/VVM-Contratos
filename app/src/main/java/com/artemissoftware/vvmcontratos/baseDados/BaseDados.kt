@@ -3,6 +3,7 @@ package com.artemissoftware.vvmcontratos.baseDados
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.artemissoftware.vvmcontratos.baseDados.dao.TipoDao
 import com.artemissoftware.vvmcontratos.baseDados.entidades.Tipo
 import com.artemissoftware.vvmcontratos.utils.constantes.VERSAO
 import kotlinx.coroutines.CoroutineScope
@@ -16,8 +17,7 @@ import javax.inject.Provider
                      ], version = VERSAO)
 abstract class BaseDados : RoomDatabase() {
 
-//    abstract fun taskDao(): TaskDao
-//
+
 //    class Callback @Inject constructor(private val database: Provider<BaseDados>, @ApplicationScope private val applicationScope: CoroutineScope) : RoomDatabase.Callback() {
 //
 //        override fun onCreate(db: SupportSQLiteDatabase) {
@@ -41,6 +41,9 @@ abstract class BaseDados : RoomDatabase() {
 //            }
 //        }
 //    }
+
+
+    abstract fun tipoDao(): TipoDao
 
 
 }

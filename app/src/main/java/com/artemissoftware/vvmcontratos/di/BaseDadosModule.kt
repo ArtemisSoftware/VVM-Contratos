@@ -22,4 +22,9 @@ object BaseDadosModule {
             //.addCallback(callback)
             .build()
     }
+
+
+    @Provides
+    fun provideTipoDao(db: BaseDados) = db.tipoDao()
+
 }

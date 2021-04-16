@@ -2,6 +2,8 @@ package com.artemissoftware.vvmcontratos.di
 
 import android.app.Application
 import com.artemissoftware.vvmcontratos.api.ContratosApi
+import com.artemissoftware.vvmcontratos.repositorios.RedeRepositorio
+import com.artemissoftware.vvmcontratos.repositorios.RedeRepositorioImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -64,13 +66,10 @@ object RedeModule {
     }
 
 
-//    @Provides
-//    @Singleton
-//    fun provideRedeRepositorio(
-//        segurancaAlimentarApi: SegurancaAlimentarApi?, segurancaTrabalhoApi: SegurancaTrabalhoApi?,
-//        transferenciasDao: TransferenciasDao_v2?
-//    ): RedeRepositorio? {
-//        return RedeRepositorio(segurancaAlimentarApi, segurancaTrabalhoApi, transferenciasDao)
-//    }
+    @Provides
+    @Singleton
+    fun provideRedeRepositorio(api: ContratosApi): RedeRepositorio {
+        return RedeRepositorioImpl(api)
+    }
 
 }

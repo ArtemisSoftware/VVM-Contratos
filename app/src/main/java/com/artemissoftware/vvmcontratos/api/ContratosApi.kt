@@ -2,6 +2,8 @@ package com.artemissoftware.vvmcontratos.api
 
 import com.artemissoftware.vvmcontratos.api.modelos.ListagemDto
 import com.artemissoftware.vvmcontratos.api.modelos.pedido.*
+import com.artemissoftware.vvmcontratos.utils.Recurso
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.HeaderMap
 import retrofit2.http.Path
@@ -31,7 +33,7 @@ interface ContratosApi {
 
 
     @GET("{metodo}?dataT=")
-    suspend fun obterTipo(@Path("metodo") metodo: String): ListagemDto<TipoDto>
+    suspend fun obterTipo(@Path("metodo") metodo: String): Response<ListagemDto<TipoDto>>
 
     @GET("{metodo}")
     suspend fun obterTipo(@Path("metodo") metodo: String, @Query("dataT") seloTemporal: String): ListagemDto<TipoDto>

@@ -18,13 +18,13 @@ interface ContratosApi {
 
 
     @GET("Obter_DadosCliente")
-    suspend fun obterDadosCliente(@Path("nif") nif :String, @Path("MessageDigest") messageDigest : String): DadosClienteDto
+    suspend fun obterDadosCliente(@Query("nif") nif :String, @Query("MessageDigest") messageDigest : String): DadosClienteDto
 
     @GET("Obter_DadosMoradasCliente")
-    suspend fun obterMoradasCliente(@Path("nif") nif :String, @Path("empresa") empresa : String, @Path("MessageDigest") messageDigest : String): MoradaDto
+    suspend fun obterMoradasCliente(@Query("nif") nif :String, @Query("empresa") empresa : String, @Query("MessageDigest") messageDigest : String): MoradaDto
 
     @GET("Obter_NumeroContrato")
-    suspend fun obterNumeroContrato(@Query("empresa") empresa :String, @Path("marca") marca : String, @Path("MessageDigest") messageDigest : String): NumeroContratoDto
+    suspend fun obterNumeroContrato(@Query("empresa") empresa :String, @Query("marca") marca : String, @Query("MessageDigest") messageDigest : String): NumeroContratoDto
 
 
 
@@ -36,6 +36,10 @@ interface ContratosApi {
     @GET("{metodo}")
     suspend fun obterTipo(@Path("metodo") metodo: String, @Query("dataT") seloTemporal: String): ListagemDto<TipoDto>
 
+
+
+    @GET("Obter_Utilizador")
+    suspend fun obterUtilizador(@Query("dataT") data: String = "", @Query("Id") id: String, @Query("Password") palavraChave: String, @Query("MessageDigest") messageDigest: String): ListagemDto<UtilizadorDto>
 
 
 

@@ -25,7 +25,7 @@ data class Contrato(
     val sincronizado: Boolean = false
 
     //val created: Long = System.currentTimeMillis()
-
+    //TODO: faltam campos
 ) {
 
 //    val createdDateFormatted: String

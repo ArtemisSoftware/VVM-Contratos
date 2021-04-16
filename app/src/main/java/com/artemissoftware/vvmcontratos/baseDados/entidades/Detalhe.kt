@@ -4,28 +4,29 @@ import androidx.annotation.NonNull
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
+import androidx.room.PrimaryKey
 
 @Entity(
-    tableName = "tipos",
+    tableName = "detalhes",
     indices = [Index(value = ["tipo"], unique = false)],
-    primaryKeys = ["id", "tipo", "codigo", "idPai"],
     foreignKeys = [ForeignKey(
-        entity = Atualizacao::class,
-        parentColumns = ["descricao"],
-        childColumns = ["tipo"],
+        entity = Tipo::class,
+        parentColumns = ["id", "tipo", "codigo", "idPai"],
+        childColumns =  ["idTipo", "tipo", "codigo", "idPai"],
         onDelete = ForeignKey.CASCADE
     )]
 )
-data class Tipo(
+data class Detalhe(
+
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
+
 
     @NonNull
-    val id: Int,
+    val idTipo: String,
 
     @NonNull
     val tipo: String,
-
-    @NonNull
-    val descricao: String,
 
     @NonNull
     val codigo: String,
@@ -33,8 +34,12 @@ data class Tipo(
     @NonNull
     val idPai: String,
 
-    @NonNull
-    val ativo: Int
 
+
+    @NonNull
+    val idDetalhe: Int,
+
+    @NonNull
+    val detalhe: String
 ) {
 }

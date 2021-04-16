@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.artemissoftware.vvmcontratos.R
+import com.artemissoftware.vvmcontratos.databinding.FragmentOpcoesAvancadasBinding
 
 
 class OpcoesAvancadasFragment : Fragment(R.layout.fragment_opcoes_avancadas) {
@@ -15,7 +17,12 @@ class OpcoesAvancadasFragment : Fragment(R.layout.fragment_opcoes_avancadas) {
         super.onViewCreated(view, savedInstanceState)
 
 
-        //val binding = FragmentOpcoes.bind(view)
+        val binding = FragmentOpcoesAvancadasBinding.bind(view)
+
+        binding.lnrLytTipos.setOnClickListener {
+            val action = OpcoesAvancadasFragmentDirections.actionOpcoesAvancadasFragmentToTiposFragment()
+            findNavController().navigate(action)
+        }
     }
 
 }

@@ -4,6 +4,7 @@ import android.app.Application
 import com.artemissoftware.vvmcontratos.api.ContratosApi
 import com.artemissoftware.vvmcontratos.repositorios.RedeRepositorio
 import com.artemissoftware.vvmcontratos.repositorios.RedeRepositorioImpl
+import com.artemissoftware.vvmcontratos.ui.interceptores.WebServiceInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,19 +24,19 @@ object RedeModule {
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(application: Application?): OkHttpClient {
+    fun provideOkHttpClient(application: Application): OkHttpClient {
 
         val loggingInterceptor = HttpLoggingInterceptor()
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
 
-        //--val webServiceInterceptor = WebServiceInterceptor()
+        val webServiceInterceptor = WebServiceInterceptor()
 
         //--val ligacaoInternetInterceptor = LigacaoInternetInterceptor(application)
 
         return OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
 //            .addInterceptor(ligacaoInternetInterceptor)
-//            .addInterceptor(webServiceInterceptor) //establish connection to server
+            .addInterceptor(webServiceInterceptor)
 //            .connectTimeout(ApiConstantes.CONNECTION_TIMEOUT, TimeUnit.SECONDS) //time between each byte read from the server
 //            .readTimeout(ApiConstantes.READ_TIMEOUT, TimeUnit.SECONDS) //time between each byte sent to server
 //            .writeTimeout(ApiConstantes.WRITE_TIMEOUT, TimeUnit.SECONDS)

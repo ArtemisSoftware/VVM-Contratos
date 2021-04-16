@@ -1,8 +1,19 @@
 package com.artemissoftware.vvmcontratos.baseDados.entidades
 
+import androidx.room.Entity
+import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 import java.util.*
 
+@Entity(
+    tableName = "pagamentos",
+    foreignKeys = [ForeignKey(
+        entity = Contrato::class,
+        parentColumns = ["id"],
+        childColumns =  ["idContrato"],
+        onDelete = ForeignKey.CASCADE
+    )]
+)
 data class Pagamento(
 
     @PrimaryKey(autoGenerate = true)

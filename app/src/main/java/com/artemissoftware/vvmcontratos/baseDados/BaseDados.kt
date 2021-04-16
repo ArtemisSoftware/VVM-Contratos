@@ -4,6 +4,7 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.artemissoftware.vvmcontratos.baseDados.dao.TipoDao
+import com.artemissoftware.vvmcontratos.baseDados.entidades.Atualizacao
 import com.artemissoftware.vvmcontratos.baseDados.entidades.Tipo
 import com.artemissoftware.vvmcontratos.utils.constantes.VERSAO
 import kotlinx.coroutines.CoroutineScope
@@ -13,7 +14,7 @@ import javax.inject.Provider
 
 
 @Database(entities = [
-                        Tipo::class
+                        Atualizacao::class, Tipo::class
                      ], version = VERSAO)
 abstract class BaseDados : RoomDatabase() {
 

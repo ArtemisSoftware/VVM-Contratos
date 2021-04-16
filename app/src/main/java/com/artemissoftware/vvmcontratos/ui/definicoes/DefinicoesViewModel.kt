@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import kotlin.math.round
 
-class DefinicoesViewModel  @ViewModelInject constructor(
+class DefinicoesViewModel @ViewModelInject constructor(
     private val redeRepositorio: RedeRepositorio,
     private val dispatcherProvider: DispatcherProvider
 ): ViewModel(){

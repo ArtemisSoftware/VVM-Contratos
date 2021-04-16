@@ -1,0 +1,120 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "23ddbf259c676a1d8fb2c7bb8d4f3eaa",
+    "entities": [
+      {
+        "tableName": "atualizacoes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`descricao` TEXT NOT NULL, `idTipo` INTEGER NOT NULL, `seloTemporal` TEXT NOT NULL, PRIMARY KEY(`descricao`))",
+        "fields": [
+          {
+            "fieldPath": "descricao",
+            "columnName": "descricao",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idTipo",
+            "columnName": "idTipo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "seloTemporal",
+            "columnName": "seloTemporal",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "descricao"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "tipos",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `tipo` TEXT NOT NULL, `descricao` TEXT NOT NULL, `codigo` TEXT NOT NULL, `idPai` TEXT NOT NULL, `ativo` INTEGER NOT NULL, PRIMARY KEY(`id`, `tipo`, `codigo`, `idPai`), FOREIGN KEY(`tipo`) REFERENCES `atualizacoes`(`descricao`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipo",
+            "columnName": "tipo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descricao",
+            "columnName": "descricao",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codigo",
+            "columnName": "codigo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idPai",
+            "columnName": "idPai",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ativo",
+            "columnName": "ativo",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id",
+            "tipo",
+            "codigo",
+            "idPai"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_tipos_tipo",
+            "unique": false,
+            "columnNames": [
+              "tipo"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_tipos_tipo` ON `${TABLE_NAME}` (`tipo`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "atualizacoes",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "tipo"
+            ],
+            "referencedColumns": [
+              "descricao"
+            ]
+          }
+        ]
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '23ddbf259c676a1d8fb2c7bb8d4f3eaa')"
+    ]
+  }
+}

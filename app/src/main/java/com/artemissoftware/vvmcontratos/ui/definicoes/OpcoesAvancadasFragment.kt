@@ -15,6 +15,7 @@ class OpcoesAvancadasFragment : Fragment(R.layout.fragment_opcoes_avancadas) {
         super.onViewCreated(view, savedInstanceState)
 
 
+        //val binding = FragmentOpcoes.bind(view)
     }
 
 }

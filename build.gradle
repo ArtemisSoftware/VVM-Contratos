@@ -5,6 +5,10 @@ buildscript {
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        mavenLocal()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url "https://kotlin.bintray.com/kotlinx" }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.1"
@@ -23,6 +27,10 @@ allprojects {
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        mavenLocal()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url "https://kotlin.bintray.com/kotlinx" }
     }
 }
 

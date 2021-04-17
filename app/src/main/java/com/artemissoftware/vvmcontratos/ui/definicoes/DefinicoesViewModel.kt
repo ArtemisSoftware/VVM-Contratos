@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.artemissoftware.vvmcontratos.api.Metodo
 import com.artemissoftware.vvmcontratos.api.MetodoTipos
 import com.artemissoftware.vvmcontratos.repositorios.RedeRepositorio
+import com.artemissoftware.vvmcontratos.repositorios.TipoRepositorio
 import com.artemissoftware.vvmcontratos.utils.BaseViewModel
 import com.artemissoftware.vvmcontratos.utils.DispatcherProvider
 import com.artemissoftware.vvmcontratos.utils.Recurso
@@ -16,6 +17,7 @@ import kotlin.math.round
 
 class DefinicoesViewModel @ViewModelInject constructor(
     private val redeRepositorio: RedeRepositorio,
+    private val tipoRepositorio: TipoRepositorio,
     private val dispatcherProvider: DispatcherProvider
 ): BaseViewModel(dispatcherProvider) {
 
@@ -35,6 +37,11 @@ class DefinicoesViewModel @ViewModelInject constructor(
                 is Recurso.Erro -> _evento.value = Evento.Erro(resposta.messagem!!)
 
                 is Recurso.Sucesso -> {
+
+                    resposta.dados?.let {
+                        tipoRepositorio.inserirTipos(it)
+                    }
+
 
 //                    val rates = ratesResponse.data!!.rates
 //                    val rate: Double = getRateForCurrency(toCurrency, rates) as Double

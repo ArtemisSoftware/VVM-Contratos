@@ -1,5 +1,6 @@
 package com.artemissoftware.vvmcontratos.api.modelos
 
+import com.artemissoftware.vvmcontratos.baseDados.entidades.Atualizacao
 import com.google.gson.annotations.SerializedName
 
 open class BaseDto (
@@ -23,4 +24,9 @@ data class ListagemDto<T>(
     @SerializedName(value = "dadosAlterados", alternate = ["Alterados", "UtilizadoresAlterados"])
     val dadosAlterados: List<T>
 
-)
+){
+
+
+
+
+}

@@ -16,6 +16,6 @@ interface TipoDao {
 
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(tipos: List<Tipo>)
+    suspend fun inserir(tipos: List<Tipo>)
 
 }

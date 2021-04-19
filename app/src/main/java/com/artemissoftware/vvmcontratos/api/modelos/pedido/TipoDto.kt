@@ -12,7 +12,7 @@ data class TipoDto(
     val idPai: String,
 
     @SerializedName("Activo")
-    val activo: Boolean,
+    val activo: Int,
 
     @SerializedName("Codigo")
     val codigo: String,

@@ -21,6 +21,7 @@ import javax.inject.Provider
 abstract class BaseDados : RoomDatabase() {
 
 
+
 //    class Callback @Inject constructor(private val database: Provider<BaseDados>, @ApplicationScope private val applicationScope: CoroutineScope) : RoomDatabase.Callback() {
 //
 //        override fun onCreate(db: SupportSQLiteDatabase) {

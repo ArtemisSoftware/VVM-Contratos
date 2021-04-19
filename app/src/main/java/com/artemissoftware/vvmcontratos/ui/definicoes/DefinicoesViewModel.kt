@@ -22,6 +22,20 @@ class DefinicoesViewModel @ViewModelInject constructor(
 ): BaseViewModel(dispatcherProvider) {
 
 
+    fun obterResumoTipo() {
+
+        viewModelScope.launch(dispatcherProvider.io) {
+
+            _evento.value = Evento.Loading
+
+
+            val resposta = tipoRepositorio.obterResumoTipo()
+
+
+            val i = 0
+            val u = 1 +1
+        }
+    }
 
 
     fun obterTipo(tipo: Metodo) {
@@ -40,7 +54,9 @@ class DefinicoesViewModel @ViewModelInject constructor(
 
                     resposta.dados?.let {
                         tipoRepositorio.inserirTipos(it)
+                        _evento.value = Evento.Sucesso("lolo")
                     }
+
 
 
 //                    val rates = ratesResponse.data!!.rates

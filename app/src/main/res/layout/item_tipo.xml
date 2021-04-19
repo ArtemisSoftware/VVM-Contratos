@@ -10,6 +10,9 @@
 
         <!--        <import type="com.artemissoftware.vvmcontratos.BuildConfig"/>-->
 
+        <variable
+            name="resumo"
+            type="com.artemissoftware.vvmcontratos.ui.definicoes.modelos.ResumoTipo" />
     </data>
 
 
@@ -26,7 +29,7 @@
                 android:id="@+id/textView"
                 style="@style/titulo.medio.bold"
                 android:layout_width="0dp"
-                android:text="@string/lorem_ipsum_texto_pequeno"
+                android:text="@{resumo.descricao, default=descricao}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

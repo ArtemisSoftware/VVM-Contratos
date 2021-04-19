@@ -27,6 +27,9 @@ class TiposFragment : Fragment(R.layout.fragment_tipos) {
         super.onViewCreated(view, savedInstanceState)
 
 
+
+
+
         //viewModel.obterTipo(MetodoTipos.EMPRESAS_VIVAMAIS)
         viewModel.obterResumoTipo()
         subscreverObservadores()

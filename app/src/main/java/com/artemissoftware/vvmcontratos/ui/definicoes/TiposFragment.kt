@@ -1,12 +1,16 @@
 package com.artemissoftware.vvmcontratos.ui.definicoes
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.observe
+import androidx.navigation.ui.onNavDestinationSelected
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.artemissoftware.vvmcontratos.R
 import com.artemissoftware.vvmcontratos.ui.definicoes.adaptadores.TipoAdaptador
@@ -80,6 +84,14 @@ class TiposFragment : Fragment(R.layout.fragment_tipos) {
 
 
     }
+
+
+
+
+
+
+
+
 
 }
 

@@ -162,4 +162,5 @@
     <string name="key_versao_app">versao</string>
     <string name="key_ultima_atualizacao">atualizacao</string>
     <string name="definicoes">Definições</string>
+    <string name="recarregar_tipos">Recarregar tipos</string>
 </resources>

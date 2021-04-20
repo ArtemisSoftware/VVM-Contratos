@@ -13,6 +13,7 @@ import androidx.lifecycle.observe
 import androidx.navigation.ui.onNavDestinationSelected
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.artemissoftware.vvmcontratos.R
+import com.artemissoftware.vvmcontratos.api.MetodoTipos
 import com.artemissoftware.vvmcontratos.ui.definicoes.adaptadores.TipoAdaptador
 import com.artemissoftware.vvmcontratos.utils.BaseViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -36,19 +37,10 @@ class TiposFragment : Fragment(R.layout.fragment_tipos) {
             setHasFixedSize(true)
         }
 
-
-
-
         subscreverObservadores()
-
-
-
-
-
-        //viewModel.obterTipo(MetodoTipos.EMPRESAS_VIVAMAIS)
-        //viewModel.obterResumoTipo()
-
     }
+
+
 
     private fun subscreverObservadores() {
 
@@ -89,6 +81,26 @@ class TiposFragment : Fragment(R.layout.fragment_tipos) {
 
 
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+
+        inflater.inflate(R.menu.tipos_menu, menu)
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        return when(item.itemId) {
+
+            R.id.item_recarregar_tipos -> {
+
+                viewModel.obterTipo(MetodoTipos.EMPRESAS_VIVAMAIS)
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
+
+    }
 
 
 

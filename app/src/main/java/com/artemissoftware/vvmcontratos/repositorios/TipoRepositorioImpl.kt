@@ -30,7 +30,7 @@ class TipoRepositorioImpl @Inject constructor(private val atualizacaoDao: Atuali
         tipoDao.inserir(mapeamento)
     }
 
-    override suspend fun obterResumoTipo(): LiveData<List<ResumoTipo>> {
+    override fun obterResumosTipo():  LiveData<List<ResumoTipo>> {
         return tipoDao.obterResumos()
     }
 

@@ -12,5 +12,5 @@ interface TipoRepositorio {
     suspend fun inserirTipos(tipos: ListagemDto<TipoDto>)
 
 
-    suspend fun obterResumoTipo(): LiveData<List<ResumoTipo>>
+    fun obterResumosTipo(): LiveData<List<ResumoTipo>>
 }

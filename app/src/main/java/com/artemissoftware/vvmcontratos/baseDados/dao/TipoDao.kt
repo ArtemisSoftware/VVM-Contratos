@@ -23,6 +23,6 @@ interface TipoDao {
 
 
     @Query("SELECT DISTINCT atl.descricao as descricao, numeroRegistos, seloTemporal FROM atualizacoes as atl LEFT JOIN (SELECT tipo, COUNT(id) as numeroRegistos FROM tipos WHERE ativo = 1 GROUP BY tipo) as tp ON atl.descricao = tp.tipo  WHERE numeroRegistos > 0 AND atl.descricao= tp.tipo ORDER BY descricao ASC")
-    fun obterResumos(): LiveData<List<ResumoTipo>>
+    fun obterResumos():  LiveData<List<ResumoTipo>>
 
 }

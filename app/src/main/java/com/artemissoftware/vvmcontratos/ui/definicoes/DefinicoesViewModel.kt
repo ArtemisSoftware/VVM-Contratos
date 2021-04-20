@@ -1,19 +1,15 @@
 package com.artemissoftware.vvmcontratos.ui.definicoes
 
 import androidx.hilt.lifecycle.ViewModelInject
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.artemissoftware.vvmcontratos.api.Metodo
-import com.artemissoftware.vvmcontratos.api.MetodoTipos
 import com.artemissoftware.vvmcontratos.repositorios.RedeRepositorio
 import com.artemissoftware.vvmcontratos.repositorios.TipoRepositorio
+import com.artemissoftware.vvmcontratos.ui.definicoes.modelos.ResumoTipo
 import com.artemissoftware.vvmcontratos.utils.BaseViewModel
 import com.artemissoftware.vvmcontratos.utils.DispatcherProvider
 import com.artemissoftware.vvmcontratos.utils.Recurso
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import kotlin.math.round
 
 class DefinicoesViewModel @ViewModelInject constructor(
     private val redeRepositorio: RedeRepositorio,
@@ -21,21 +17,16 @@ class DefinicoesViewModel @ViewModelInject constructor(
     private val dispatcherProvider: DispatcherProvider
 ): BaseViewModel(dispatcherProvider) {
 
-
-    fun obterResumoTipo() {
-
-        viewModelScope.launch(dispatcherProvider.io) {
-
-            _evento.value = Evento.Loading
+    //    var _allWords : LiveData<List<ResumoTipo>>()
+//    val allWords: LiveData<List<ResumoTipo>>
+//        get() = tipoRepositorio.obterResumoTipo().flowOn(dispatcherProvider.main)
+//            .asLiveData(context = viewModelScope.coroutineContext)
 
 
-            val resposta = tipoRepositorio.obterResumoTipo()
 
 
-            val i = 0
-            val u = 1 +1
-        }
-    }
+    fun obterResumosTipo() = tipoRepositorio.obterResumosTipo()
+
 
 
     fun obterTipo(tipo: Metodo) {
@@ -77,16 +68,6 @@ class DefinicoesViewModel @ViewModelInject constructor(
 
 
 
-
-//    sealed class CurrencyEvent {
-//        class Success(val resultText: String): CurrencyEvent()
-//        class Failure(val errorText: String): CurrencyEvent()
-//        object Loading : CurrencyEvent()
-//        object Empty : CurrencyEvent()
-//    }
-//
-//
-//
 //    private val _conversion = MutableStateFlow<CurrencyEvent>(CurrencyEvent.Empty)
 //    val conversion: StateFlow<CurrencyEvent> = _conversion
 //

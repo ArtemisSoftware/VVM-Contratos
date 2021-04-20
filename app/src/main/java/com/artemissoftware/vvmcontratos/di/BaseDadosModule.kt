@@ -25,7 +25,7 @@ object BaseDadosModule {
     @Singleton
     fun provideBaseDados(app: Application/*, callback: BaseDados.Callback*/): BaseDados {
         return Room.databaseBuilder(app, BaseDados::class.java, NOME_BASE_DADOS)
-            .fallbackToDestructiveMigration()
+            //.fallbackToDestructiveMigration()
             //.addCallback(callback)
             .build()
     }

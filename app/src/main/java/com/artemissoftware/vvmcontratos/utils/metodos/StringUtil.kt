@@ -12,6 +12,7 @@ class StringUtil {
          * @param valor o valor a converter
          * @return o valor convertido
          */
+        @JvmStatic
         fun converterString(valor: Int): String {
             return valor.toString() + ""
         }
@@ -21,6 +22,7 @@ class StringUtil {
          * @param valor o valor a converter
          * @return o valor convertido
          */
+        @JvmStatic
         fun converterString(valor: Double): String {
             return valor.toString() + ""
         }
@@ -31,6 +33,7 @@ class StringUtil {
          * @param valor o valor a formatar
          * @return o valor formatado
          */
+        @JvmStatic
         fun formatarHtml(valor: String): String {
             return if (valor == null) {
                 ""

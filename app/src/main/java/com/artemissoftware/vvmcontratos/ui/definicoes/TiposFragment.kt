@@ -30,6 +30,7 @@ class TiposFragment : Fragment(R.layout.fragment_tipos) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setHasOptionsMenu(true)
 
         recyclerView.apply {
             adapter = TipoAdaptador()

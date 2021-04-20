@@ -5,6 +5,7 @@ import com.artemissoftware.vvmcontratos.api.modelos.ListagemDto
 import com.artemissoftware.vvmcontratos.api.modelos.pedido.TipoDto
 import com.artemissoftware.vvmcontratos.baseDados.dao.AtualizacaoDao
 import com.artemissoftware.vvmcontratos.baseDados.dao.TipoDao
+import com.artemissoftware.vvmcontratos.baseDados.entidades.Tipo
 import com.artemissoftware.vvmcontratos.ui.definicoes.modelos.ResumoTipo
 import com.artemissoftware.vvmcontratos.utils.mapeamento.map
 import com.artemissoftware.vvmcontratos.utils.mapeamento.mapDetalhe
@@ -32,6 +33,10 @@ class TipoRepositorioImpl @Inject constructor(private val atualizacaoDao: Atuali
 
     override fun obterResumosTipo():  LiveData<List<ResumoTipo>> {
         return tipoDao.obterResumos()
+    }
+
+    override fun obteTipo(tipo: String): LiveData<List<Tipo>> {
+        return tipoDao.obterTipo(tipo)
     }
 
 

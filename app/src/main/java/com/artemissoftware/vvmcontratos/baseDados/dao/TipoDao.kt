@@ -13,8 +13,8 @@ import kotlinx.coroutines.flow.Flow
 interface TipoDao {
 
 
-    @Query("SELECT * FROM tipos WHERE tipo =:tipo  AND ativo = 1 ORDER BY id ASC ")
-    fun obterTipo(tipo: String): Flow<List<Tipo>>
+//    @Query("SELECT * FROM tipos WHERE tipo =:tipo  AND ativo = 1 ORDER BY id ASC ")
+//    fun obterTipo(tipo: String): Flow<List<Tipo>>
 
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -24,5 +24,9 @@ interface TipoDao {
 
     @Query("SELECT DISTINCT atl.descricao as descricao, numeroRegistos, seloTemporal FROM atualizacoes as atl LEFT JOIN (SELECT tipo, COUNT(id) as numeroRegistos FROM tipos WHERE ativo = 1 GROUP BY tipo) as tp ON atl.descricao = tp.tipo  WHERE numeroRegistos > 0 AND atl.descricao= tp.tipo ORDER BY descricao ASC")
     fun obterResumos():  LiveData<List<ResumoTipo>>
+
+
+    @Query("SELECT * FROM tipos WHERE tipo =:tipo  AND ativo = 1 ORDER BY id ASC ")
+    fun obterTipo(tipo: String): LiveData<List<Tipo>>
 
 }

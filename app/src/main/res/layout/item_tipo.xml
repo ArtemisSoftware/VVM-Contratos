@@ -11,6 +11,7 @@
         <!--        <import type="com.artemissoftware.vvmcontratos.BuildConfig"/>-->
 
         <import type="com.artemissoftware.vvmcontratos.utils.metodos.DatasUtil"/>
+        <import type="com.artemissoftware.vvmcontratos.utils.metodos.StringUtil"/>
 
         <variable
             name="resumo"
@@ -47,7 +48,7 @@
 
             <TextView
                 style="@style/texto"
-                android:text="@string/lorem_ipsum_numero"
+                android:text="@{StringUtil.converterString(resumo.numeroRegistos), default=0}"
                 app:layout_constraintBottom_toBottomOf="@+id/textView4"
                 app:layout_constraintStart_toStartOf="@+id/textView6"
                 app:layout_constraintTop_toTopOf="@+id/textView4" />
@@ -66,7 +67,7 @@
                 android:id="@+id/textView6"
                 style="@style/texto"
                 android:layout_marginStart="24dp"
-                android:text="@string/lorem_ipsum_numero"
+                android:text="@{StringUtil.converterString(resumo.numeroRegistos), default=0}"
                 app:layout_constraintBottom_toBottomOf="@+id/textView5"
                 app:layout_constraintStart_toEndOf="@+id/textView5"
                 app:layout_constraintTop_toTopOf="@+id/textView5" />

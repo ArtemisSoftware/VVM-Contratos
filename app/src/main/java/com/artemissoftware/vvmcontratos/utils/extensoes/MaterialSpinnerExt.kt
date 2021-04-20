@@ -5,7 +5,7 @@ import com.artemissoftware.vvmcontratos.baseDados.entidades.Tipo
 import com.jaredrummler.materialspinner.MaterialSpinner
 
 @BindingAdapter("tipos")
-fun MaterialSpinner.fixarTipos(tipos : List<Tipo>? ) {
+fun MaterialSpinner.fixarTipos(tipos : List<Tipo>?) {
 
     tipos?.let {
 

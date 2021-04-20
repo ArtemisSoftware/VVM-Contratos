@@ -20,7 +20,7 @@ interface ContratosApi {
 
 
     @GET("Obter_DadosCliente")
-    suspend fun obterDadosCliente(@Query("nif") nif :String, @Query("MessageDigest") messageDigest : String): DadosClienteDto
+    suspend fun obterDadosCliente(@Query("nif") nif :String, @Query("MessageDigest") messageDigest : String): Response<DadosClienteDto>
 
     @GET("Obter_DadosMoradasCliente")
     suspend fun obterMoradasCliente(@Query("nif") nif :String, @Query("empresa") empresa : String, @Query("MessageDigest") messageDigest : String): MoradaDto

@@ -1,6 +1,7 @@
 package com.artemissoftware.vvmcontratos.repositorios
 
 import androidx.lifecycle.LiveData
+import com.artemissoftware.vvmcontratos.api.Metodo
 import com.artemissoftware.vvmcontratos.api.modelos.ListagemDto
 import com.artemissoftware.vvmcontratos.api.modelos.pedido.TipoDto
 import com.artemissoftware.vvmcontratos.baseDados.entidades.Tipo
@@ -15,5 +16,5 @@ interface TipoRepositorio {
 
     fun obterResumosTipo(): LiveData<List<ResumoTipo>>
 
-    fun obteTipo(tipo: String): LiveData<List<Tipo>>
+    fun obteTipo(metodo: Metodo): LiveData<List<Tipo>>
 }

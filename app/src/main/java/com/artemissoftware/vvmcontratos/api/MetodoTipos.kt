@@ -10,6 +10,18 @@ class MetodoTipos {
 
 
         val LISTAGEM = listOf<Metodo>(EMPRESAS_VIVAMAIS, MARCAS, TIPOS_CONTRATOS)
+
+
+        /**
+         * Metodo que permite obter o metodo do tipo associado caso exista ou apenas o metodo
+         * @param pathSegments
+         * @param header os dados do header
+         * @return um metodo
+         * @throws TipoInexistenteException
+         */
+
+
+
     }
 }
 

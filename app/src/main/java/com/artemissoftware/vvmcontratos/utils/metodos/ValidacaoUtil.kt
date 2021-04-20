@@ -1,4 +1,4 @@
-package com.artemissoftware.vvmcontratos.utils
+package com.artemissoftware.vvmcontratos.utils.metodos
 
 object ValidacaoUtil {
 

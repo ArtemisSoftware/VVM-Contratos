@@ -1,6 +1,7 @@
 package com.artemissoftware.vvmcontratos.repositorios
 
 import androidx.lifecycle.LiveData
+import com.artemissoftware.vvmcontratos.api.Metodo
 import com.artemissoftware.vvmcontratos.api.modelos.ListagemDto
 import com.artemissoftware.vvmcontratos.api.modelos.pedido.TipoDto
 import com.artemissoftware.vvmcontratos.baseDados.dao.AtualizacaoDao
@@ -35,8 +36,8 @@ class TipoRepositorioImpl @Inject constructor(private val atualizacaoDao: Atuali
         return tipoDao.obterResumos()
     }
 
-    override fun obteTipo(tipo: String): LiveData<List<Tipo>> {
-        return tipoDao.obterTipo(tipo)
+    override fun obteTipo(metodo: Metodo): LiveData<List<Tipo>> {
+        return tipoDao.obterTipo(metodo.metodoApi)
     }
 
 

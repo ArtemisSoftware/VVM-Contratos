@@ -63,6 +63,7 @@
                     android:layout_width="434dp"
                     android:layout_height="574dp"
                     android:background="@drawable/white_cueve_bg"
+                    android:backgroundTint="@color/GhostWhite"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +91,9 @@
                     app:layout_constraintTop_toBottomOf="@+id/textview1">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_nif"
                         style="@style/texto.editavel"
+                        android:text="510210040"
                         android:inputType="number"
                         android:maxLines="1" />
 
@@ -119,7 +122,7 @@
                         android:layout_width="360dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        app:tipos="@{viewmodel.jojo}"/>
+                        app:tipos="@{viewmodel.tiposContratos}"/>
 
                 </LinearLayout>
 
@@ -129,7 +132,7 @@
                     style="@style/texto"
                     android:layout_marginTop="24dp"
                     android:text="@string/contrato_iniciado_agenda"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="@+id/view"
                     app:layout_constraintStart_toStartOf="@+id/textview1"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout" />

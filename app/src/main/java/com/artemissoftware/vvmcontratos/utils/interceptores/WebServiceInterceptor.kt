@@ -1,4 +1,4 @@
-package com.artemissoftware.vvmcontratos.ui.interceptores
+package com.artemissoftware.vvmcontratos.utils.interceptores
 
 import com.google.gson.GsonBuilder
 import okhttp3.Headers
@@ -21,13 +21,13 @@ class WebServiceInterceptor: Interceptor {
         val pedido = chain.request()
 
         //
-
+        val metodo: String = obterMetodo(pedido.url.pathSegments)
 
         val resposta = chain.proceed(pedido)
         val corpo = resposta.body
         val contentType = corpo!!.contentType()
 
-        val body: ResponseBody = formatarResposta(corpo.string(), "metodo", pedido.headers).toResponseBody(contentType)
+        val body: ResponseBody = formatarResposta(corpo.string(), metodo, pedido.headers).toResponseBody(contentType)
         return resposta.newBuilder().body(body).build()
     }
 
@@ -76,6 +76,11 @@ class WebServiceInterceptor: Interceptor {
         return dados
     }
 
+
+    @Throws(IndexOutOfBoundsException::class)
+    private fun obterMetodo(pathSegments: List<String>): String {
+        return pathSegments[2]
+    }
 
 //
 //    @Throws(IOException::class)

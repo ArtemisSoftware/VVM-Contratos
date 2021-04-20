@@ -4,7 +4,7 @@ import android.app.Application
 import com.artemissoftware.vvmcontratos.api.ContratosApi
 import com.artemissoftware.vvmcontratos.repositorios.RedeRepositorio
 import com.artemissoftware.vvmcontratos.repositorios.RedeRepositorioImpl
-import com.artemissoftware.vvmcontratos.ui.interceptores.WebServiceInterceptor
+import com.artemissoftware.vvmcontratos.utils.interceptores.WebServiceInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -13,8 +13,6 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.TimeUnit
-import javax.inject.Named
 import javax.inject.Singleton
 
 @Module

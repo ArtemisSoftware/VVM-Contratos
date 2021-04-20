@@ -127,8 +127,8 @@ dependencies {
 //    annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
 
 
-//    def Hasher_version = "1.2"
-//    implementation "com.github.ihimanshurawat:Hasher:$Hasher_version"
+    def Hasher_version = "1.2"
+    implementation "com.github.ihimanshurawat:Hasher:$Hasher_version"
 //
 //
 //    def dexter_version = "6.0.2"

@@ -14,6 +14,7 @@ import androidx.navigation.ui.onNavDestinationSelected
 import com.artemissoftware.vvmcontratos.R
 import com.artemissoftware.vvmcontratos.databinding.FragmentAcordoBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_acordo.*
 
 @AndroidEntryPoint
 class AcordoFragment : Fragment(R.layout.fragment_acordo) {
@@ -28,8 +29,7 @@ class AcordoFragment : Fragment(R.layout.fragment_acordo) {
 
         navController = findNavController()
         val appBarConfiguration = AppBarConfiguration(navController.graph)
-//
-//        toolbar.setupWithNavController(navController, appBarConfiguration)
+
         setHasOptionsMenu(true)
 
         val binding = FragmentAcordoBinding.bind(view)
@@ -37,10 +37,12 @@ class AcordoFragment : Fragment(R.layout.fragment_acordo) {
         binding.setViewmodel(viewModel)
 
 
-//        viewModel.jojo.observe(viewLifecycleOwner) { it ->
-//            val i = 0
-//        }
 
+        btn_validar.setOnClickListener {
+
+            viewModel.obterDadosContrato(txt_nif.text.toString())
+
+        }
     }
 
 

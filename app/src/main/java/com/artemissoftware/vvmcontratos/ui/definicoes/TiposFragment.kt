@@ -94,7 +94,7 @@ class TiposFragment : Fragment(R.layout.fragment_tipos) {
 
             R.id.item_recarregar_tipos -> {
 
-                viewModel.obterTipo(MetodoTipos.EMPRESAS_VIVAMAIS)
+                viewModel.obterTipo(MetodoTipos.TIPOS_CONTRATOS)
                 true
             }
 

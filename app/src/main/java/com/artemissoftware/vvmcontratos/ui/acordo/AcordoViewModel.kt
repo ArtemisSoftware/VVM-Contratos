@@ -14,8 +14,8 @@ class AcordoViewModel @ViewModelInject constructor(
     private val dispatcherProvider: DispatcherProvider
 ): BaseViewModel(dispatcherProvider) {
 
-    val jojo: LiveData<List<Tipo>> = tipoRepositorio.obteTipo(MetodoTipos.EMPRESAS_VIVAMAIS.descricao)
+    //val jojo: LiveData<List<Tipo>> = tipoRepositorio.obteTipo(MetodoTipos.EMPRESAS_VIVAMAIS.descricao)
 
-
+    val jojo: LiveData<List<Tipo>> = tipoRepositorio.obteTipo("metodo")
 
 }

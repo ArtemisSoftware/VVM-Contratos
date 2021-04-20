@@ -1,20 +1,19 @@
 package com.artemissoftware.vvmcontratos.ui.acordo
 
 import android.os.Bundle
-import android.view.*
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.observe
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.onNavDestinationSelected
-import androidx.navigation.ui.setupWithNavController
 import com.artemissoftware.vvmcontratos.R
-import com.artemissoftware.vvmcontratos.ui.definicoes.adaptadores.TipoAdaptador
+import com.artemissoftware.vvmcontratos.databinding.FragmentAcordoBinding
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_acordo.*
-import kotlinx.android.synthetic.main.fragment_tipos.*
 
 @AndroidEntryPoint
 class AcordoFragment : Fragment(R.layout.fragment_acordo) {
@@ -33,10 +32,14 @@ class AcordoFragment : Fragment(R.layout.fragment_acordo) {
 //        toolbar.setupWithNavController(navController, appBarConfiguration)
         setHasOptionsMenu(true)
 
+        val binding = FragmentAcordoBinding.bind(view)
+        binding.setLifecycleOwner(this)
+        binding.setViewmodel(viewModel)
 
-        viewModel.jojo.observe(viewLifecycleOwner) { it ->
-            val i = 0
-        }
+
+//        viewModel.jojo.observe(viewLifecycleOwner) { it ->
+//            val i = 0
+//        }
 
     }
 

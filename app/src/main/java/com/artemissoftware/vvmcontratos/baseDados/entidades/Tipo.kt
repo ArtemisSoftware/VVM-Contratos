@@ -37,4 +37,12 @@ data class Tipo(
     val ativo: Int
 
 ) {
+
+    override fun toString(): String {
+        return if (descricao == null) {
+            ""
+        } else{
+            descricao
+        }
+    }
 }

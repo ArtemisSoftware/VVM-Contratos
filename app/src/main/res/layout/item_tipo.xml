@@ -10,6 +10,8 @@
 
         <!--        <import type="com.artemissoftware.vvmcontratos.BuildConfig"/>-->
 
+        <import type="com.artemissoftware.vvmcontratos.utils.metodos.DatasUtil"/>
+
         <variable
             name="resumo"
             type="com.artemissoftware.vvmcontratos.ui.definicoes.modelos.ResumoTipo" />
@@ -82,7 +84,7 @@
             <TextView
                 android:id="@+id/textView8"
                 style="@style/texto"
-                android:text="@string/lorem_ipsum_numero"
+                android:text="@{DatasUtil.converterData(resumo.seloTemporal, DatasUtil.FORMATO_DD_MM_YYYY__HH_MM_SS), default=data}"
                 app:layout_constraintBottom_toBottomOf="@+id/textView7"
                 app:layout_constraintStart_toStartOf="@+id/textView6"
                 app:layout_constraintTop_toTopOf="@+id/textView7" />

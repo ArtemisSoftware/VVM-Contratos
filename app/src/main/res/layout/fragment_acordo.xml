@@ -40,34 +40,13 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/constraint11"
+                android:layout_width="500dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
-
-                <ImageView
-                    android:layout_width="440dp"
-                    android:layout_height="580dp"
-                    android:background="@drawable/white_cueve_bg"
-                    android:backgroundTint="@color/colorPrimary"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <ImageView
-                    android:id="@+id/imageView1"
-                    android:layout_width="434dp"
-                    android:layout_height="574dp"
-                    android:background="@drawable/white_cueve_bg"
-                    android:backgroundTint="@color/GhostWhite"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
 
                 <TextView
@@ -76,8 +55,8 @@
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
                     android:text="@string/contrato"
-                    app:layout_constraintStart_toStartOf="@+id/imageView1"
-                    app:layout_constraintTop_toTopOf="@+id/imageView1" />
+                    app:layout_constraintStart_toStartOf="@+id/constraint11"
+                    app:layout_constraintTop_toTopOf="@+id/constraint11" />
 
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -157,10 +136,12 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraint_iniciar_contrato"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
+                    android:layout_marginEnd="32dp"
                     android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/constraint11"
                     app:layout_constraintStart_toStartOf="@+id/textview1"
                     app:layout_constraintTop_toBottomOf="@+id/btn_validar">
 
@@ -175,9 +156,10 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/constraint1"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="32dp"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/txt_tipo_cliente"
                         app:layout_constraintTop_toBottomOf="@+id/txt_tipo_cliente">
 
@@ -475,6 +457,16 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <include
+                android:id="@+id/loading"
+                layout="@layout/loading"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

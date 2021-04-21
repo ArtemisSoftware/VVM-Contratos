@@ -5,16 +5,20 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.onNavDestinationSelected
 import com.artemissoftware.vvmcontratos.R
 import com.artemissoftware.vvmcontratos.databinding.FragmentAcordoBinding
+import com.artemissoftware.vvmcontratos.utils.BaseViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_acordo.*
+import kotlinx.coroutines.flow.collect
 
 @AndroidEntryPoint
 class AcordoFragment : Fragment(R.layout.fragment_acordo) {
@@ -36,14 +40,69 @@ class AcordoFragment : Fragment(R.layout.fragment_acordo) {
         binding.setLifecycleOwner(this)
         binding.setViewmodel(viewModel)
 
-
+        subscreverObservadores()
 
         btn_validar.setOnClickListener {
-
-            viewModel.obterDadosContrato(txt_nif.text.toString())
-
+            viewModel.obterDadosCliente(txt_nif.text.toString())
         }
     }
+
+
+    private fun subscreverObservadores() {
+
+        lifecycleScope.launchWhenStarted {
+            viewModel.evento.collect { evento ->
+
+                when (evento) {
+
+                    is BaseViewModel.Evento.Sucesso -> {
+                        loading.isVisible = false
+
+                    }
+
+                    is BaseViewModel.Evento.Erro -> {
+                        loading.isVisible = false
+
+                    }
+
+                    is BaseViewModel.Evento.Loading -> {
+                        loading.isVisible = true
+                    }
+                    else -> Unit
+                }
+            }
+
+        }
+
+
+        lifecycleScope.launchWhenStarted {
+
+            viewModel.mensagem.collect { evento ->
+
+                when (evento) {
+
+                    is AcordoViewModel.EventoAcordo.ObterDadosContrato -> {
+                        loading.isVisible = false
+                        constraint_iniciar_contrato.visibility = View.VISIBLE
+                        btn_validar.visibility = View.GONE
+                        txt_tipo_cliente.text = evento.estado
+                    }
+
+                    else -> Unit
+                }
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+
+
 
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

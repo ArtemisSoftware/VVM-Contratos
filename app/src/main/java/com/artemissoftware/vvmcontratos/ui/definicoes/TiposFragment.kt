@@ -94,7 +94,8 @@ class TiposFragment : Fragment(R.layout.fragment_tipos) {
 
             R.id.item_recarregar_tipos -> {
 
-                viewModel.obterTipo(MetodoTipos.TIPOS_CONTRATOS)
+//                viewModel.obterTipo(MetodoTipos.TIPOS_CONTRATOS)
+                viewModel.recarregarTipos()
                 true
             }
 

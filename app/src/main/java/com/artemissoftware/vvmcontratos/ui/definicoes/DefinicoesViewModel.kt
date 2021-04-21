@@ -3,12 +3,17 @@ package com.artemissoftware.vvmcontratos.ui.definicoes
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
 import com.artemissoftware.vvmcontratos.api.Metodo
+import com.artemissoftware.vvmcontratos.api.MetodoTipos
+import com.artemissoftware.vvmcontratos.api.modelos.ListagemDto
+import com.artemissoftware.vvmcontratos.api.modelos.pedido.TipoDto
 import com.artemissoftware.vvmcontratos.repositorios.RedeRepositorio
 import com.artemissoftware.vvmcontratos.repositorios.TipoRepositorio
 import com.artemissoftware.vvmcontratos.ui.definicoes.modelos.ResumoTipo
 import com.artemissoftware.vvmcontratos.utils.BaseViewModel
 import com.artemissoftware.vvmcontratos.utils.DispatcherProvider
 import com.artemissoftware.vvmcontratos.utils.Recurso
+import com.artemissoftware.vvmcontratos.utils.extensoes.asyncAll
+import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.launch
 
 class DefinicoesViewModel @ViewModelInject constructor(
@@ -53,6 +58,19 @@ class DefinicoesViewModel @ViewModelInject constructor(
         }
     }
 
+    fun recarregarTipos() {
 
+        viewModelScope.launch(dispatcherProvider.io) {
+
+            _evento.value = Evento.Loading
+
+                var lolo = mutableListOf<Recurso<ListagemDto<TipoDto>>>()
+                val listCrypto = MetodoTipos.LISTAGEM
+                asyncAll(listCrypto) { redeRepositorio.obterTipo(it.metodoApi) }.awaitAll().forEach { lolo.add(it)}
+
+
+            val i = 0
+        }
+    }
 
 }

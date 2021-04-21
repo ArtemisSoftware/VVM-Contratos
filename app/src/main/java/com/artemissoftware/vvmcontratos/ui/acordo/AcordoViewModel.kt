@@ -32,7 +32,8 @@ class AcordoViewModel @ViewModelInject constructor(
     private lateinit var dadosCliente: DadosClienteDto;
 
     val tiposContratos: LiveData<List<Tipo>> = tipoRepositorio.obteTipo(MetodoTipos.TIPOS_CONTRATOS)
-
+    val tiposEmpresas: LiveData<List<Tipo>> = tipoRepositorio.obteTipo(MetodoTipos.EMPRESAS_VIVAMAIS)
+    val tiposMarcas: LiveData<List<Tipo>> = tipoRepositorio.obteTipo(MetodoTipos.MARCAS)
 
 
     fun obterDadosCliente(nif: String) {

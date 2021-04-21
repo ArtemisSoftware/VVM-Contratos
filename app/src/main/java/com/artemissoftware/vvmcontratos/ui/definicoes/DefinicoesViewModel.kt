@@ -14,6 +14,7 @@ import com.artemissoftware.vvmcontratos.utils.DispatcherProvider
 import com.artemissoftware.vvmcontratos.utils.Recurso
 import com.artemissoftware.vvmcontratos.utils.extensoes.asyncAll
 import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 
 class DefinicoesViewModel @ViewModelInject constructor(
@@ -58,19 +59,38 @@ class DefinicoesViewModel @ViewModelInject constructor(
         }
     }
 
+
     fun recarregarTipos() {
 
         viewModelScope.launch(dispatcherProvider.io) {
+            try {
+                coroutineScope {
 
-            _evento.value = Evento.Loading
+                    _evento.value = Evento.Loading
 
-                var lolo = mutableListOf<Recurso<ListagemDto<TipoDto>>>()
-                val listCrypto = MetodoTipos.LISTAGEM
-                asyncAll(listCrypto) { redeRepositorio.obterTipo(it.metodoApi) }.awaitAll().forEach { lolo.add(it)}
+                    var registos = mutableListOf<Recurso<ListagemDto<TipoDto>>>()
 
+                    asyncAll(MetodoTipos.LISTAGEM) { redeRepositorio.obterTipo(it.metodoApi) }.awaitAll()
+                        .forEach { registos.add(it) }
 
-            val i = 0
+                    tipoRepositorio.recarregarTipos(obterRespostasValidas(registos))
+
+                    _evento.value = Evento.Sucesso("lolo")
+                }
+            } catch (e: Exception) {
+                _evento.value = Evento.Erro(e.message!!)
+            }
         }
+    }
+
+
+    private fun obterRespostasValidas(registos : List<Recurso<ListagemDto<TipoDto>>>) : List<ListagemDto<TipoDto>>{
+
+        var tipos = mutableListOf<ListagemDto<TipoDto>>()
+
+        registos.filter { it is Recurso.Sucesso }.forEach{ it.dados?.let { it1 -> tipos.add(it1) } }
+
+        return tipos
     }
 
 }

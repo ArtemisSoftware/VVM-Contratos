@@ -17,20 +17,36 @@ import javax.inject.Inject
 class TipoRepositorioImpl @Inject constructor(private val atualizacaoDao: AtualizacaoDao, private val tipoDao: TipoDao):TipoRepositorio{
 
 
-    override suspend fun inserirTipos(tipos: ListagemDto<TipoDto>) {
+    override suspend fun inserirTipos(registos: ListagemDto<TipoDto>) {
 
         //mapeamento
-        val mapeamento2= tipos.map()
-        val mapeamento = tipos.map_()
-        val detalhes = tipos.mapDetalhe()
+        val atualizacao= registos.map()
+        val tipos = registos.map_()
+        val detalhes = registos.mapDetalhe()
 
         //val lolo = mapeamento.map(tipos)
         //eliminar
         //atualizacaoDao.eliminar(mapeamento2.descricao)
         //inserir
-        atualizacaoDao.inserir(mapeamento2)
-        tipoDao.inserir(mapeamento)
+        atualizacaoDao.inserir(atualizacao)
+        tipoDao.inserir(tipos)
     }
+
+
+    override suspend fun recarregarTipos(registos: List<ListagemDto<TipoDto>>) {
+
+        registos.forEach{
+
+            val atualizacao= it.map()
+            val tipos = it.map_()
+
+            atualizacaoDao.eliminar(atualizacao.descricao)
+            atualizacaoDao.inserir(atualizacao)
+            tipoDao.inserir(tipos)
+        }
+
+    }
+
 
     override fun obterResumosTipo():  LiveData<List<ResumoTipo>> {
         return tipoDao.obterResumos()

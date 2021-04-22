@@ -84,6 +84,9 @@ class DefinicoesViewModel @ViewModelInject constructor(
     }
 
 
+
+
+    
     private fun obterRespostasValidas(registos : List<Recurso<ListagemDto<TipoDto>>>) : List<ListagemDto<TipoDto>>{
 
         var tipos = mutableListOf<ListagemDto<TipoDto>>()

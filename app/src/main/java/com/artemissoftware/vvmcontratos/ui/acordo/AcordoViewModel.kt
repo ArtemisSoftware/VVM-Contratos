@@ -68,37 +68,38 @@ class AcordoViewModel @ViewModelInject constructor(
     }
 
 
-//    fun obterDadosContrato(nif: String) {
-//
-//        viewModelScope.launch(dispatcherProvider.io) {
-//            try {
-//                coroutineScope {
-//
-//                    _evento.value = Evento.Loading
-//
-//                    val call1 = async { redeRepositorio.obterDadosCliente(nif) }
-////                    val call2 = async { cryptoCurrencyRepository.getCoinData("DOGE") }
-////                    val call3 = async { cryptoCurrencyRepository.getError() }
-//
-//                    try {
-//                        val ltc = call1.await()
-////                        val doge = call2.await()
-////                        val error = call3.await()
-//
-//                        _evento.value = Evento.Sucesso("LTC has  ")
-//
-//                    } catch (e: Exception) {
-//                        _evento.value = Evento.Erro(e.message!!)
-//                    }
-//
-//                }
-//
-//            }
-//            catch (e: Exception) {
-//                _evento.value = Evento.Erro(e.message!!)
-//            }
-//        }
-//    }
+    fun obterDadosContrato(nif: String, empresa: Tipo, marca: Tipo) {
+
+        viewModelScope.launch(dispatcherProvider.io) {
+            try {
+                coroutineScope {
+
+                    _evento.value = Evento.Loading
+
+                    val respostasMoradas = async { redeRepositorio.obterMoradasCliente(nif, empresa.descricao) }
+                    val respostaNumeroContrato = async { redeRepositorio.obterNumeroContrato (empresa.id.toString(), marca.id.toString()) }
+//                    val call3 = async { cryptoCurrencyRepository.getError() }
+
+                    try {
+                        val moradas = respostasMoradas.await()
+                        val numeroContrato = respostaNumeroContrato.await()
+//                        contratoRepositorio.inserirDadosContrato(dadosCliente, moradas.dados, numeroContrato.dados)
+//                        val error = call3.await()
+
+                        //_evento.value = Evento.Sucesso("LTC has  ")
+
+                    } catch (e: Exception) {
+                        _evento.value = Evento.Erro(e.message!!)
+                    }
+
+                }
+
+            }
+            catch (e: Exception) {
+                _evento.value = Evento.Erro(e.message!!)
+            }
+        }
+    }
 
 
     sealed class EventoAcordo {

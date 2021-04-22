@@ -23,10 +23,10 @@ interface ContratosApi {
     suspend fun obterDadosCliente(@Query("nif") nif :String, @Query("MessageDigest") messageDigest : String): Response<DadosClienteDto>
 
     @GET("Obter_DadosMoradasCliente")
-    suspend fun obterMoradasCliente(@Query("nif") nif :String, @Query("empresa") empresa : String, @Query("MessageDigest") messageDigest : String): MoradaDto
+    suspend fun obterMoradasCliente(@Query("nif") nif :String, @Query("empresa") empresa : String, @Query("MessageDigest") messageDigest : String): Response<MoradaDto>
 
     @GET("Obter_NumeroContrato")
-    suspend fun obterNumeroContrato(@Query("empresa") empresa :String, @Query("marca") marca : String, @Query("MessageDigest") messageDigest : String): NumeroContratoDto
+    suspend fun obterNumeroContrato(@Query("empresa") idEmpresa :String, @Query("marca") idMarca : String, @Query("MessageDigest") messageDigest : String): Response<NumeroContratoDto>
 
 
 

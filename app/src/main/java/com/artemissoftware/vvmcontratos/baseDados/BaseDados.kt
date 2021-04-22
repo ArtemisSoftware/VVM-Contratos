@@ -3,10 +3,8 @@ package com.artemissoftware.vvmcontratos.baseDados
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.artemissoftware.vvmcontratos.baseDados.dao.AtualizacaoDao
-import com.artemissoftware.vvmcontratos.baseDados.dao.TipoDao
-import com.artemissoftware.vvmcontratos.baseDados.entidades.Atualizacao
-import com.artemissoftware.vvmcontratos.baseDados.entidades.Tipo
+import com.artemissoftware.vvmcontratos.baseDados.dao.*
+import com.artemissoftware.vvmcontratos.baseDados.entidades.*
 import com.artemissoftware.vvmcontratos.utils.constantes.VERSAO
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -15,7 +13,9 @@ import javax.inject.Provider
 
 
 @Database(entities = [
-                        Atualizacao::class, Tipo::class
+                        Atualizacao::class, Tipo::class, Detalhe::class,
+
+                        Contrato::class, Cliente::class, Morada::class
                      ],
           version = VERSAO)
 abstract class BaseDados : RoomDatabase() {
@@ -50,5 +50,12 @@ abstract class BaseDados : RoomDatabase() {
 
     abstract fun tipoDao(): TipoDao
 
+    abstract fun contratoDao(): ContratoDao
+
+    //abstract fun tipoDao(): DeDao
+
+    abstract fun clienteDao(): ClienteDao
+
+    abstract fun moradaDao(): MoradaDao
 
 }

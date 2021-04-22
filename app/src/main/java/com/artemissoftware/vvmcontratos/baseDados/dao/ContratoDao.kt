@@ -9,5 +9,5 @@ import com.artemissoftware.vvmcontratos.baseDados.entidades.Contrato
 interface ContratoDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun inserir(contrato: Contrato)
+    suspend fun inserir(contrato: Contrato): Long
 }

@@ -68,7 +68,7 @@ class AcordoViewModel @ViewModelInject constructor(
     }
 
 
-    fun obterDadosContrato(nif: String, empresa: Tipo, marca: Tipo) {
+    fun obterDadosContrato(idUtilizador: String, nif: String, tipoContrato: Tipo, empresa: Tipo, marca: Tipo) {
 
         viewModelScope.launch(dispatcherProvider.io) {
             try {
@@ -83,7 +83,10 @@ class AcordoViewModel @ViewModelInject constructor(
                     try {
                         val moradas = respostasMoradas.await()
                         val numeroContrato = respostaNumeroContrato.await()
-//                        contratoRepositorio.inserirDadosContrato(dadosCliente, moradas.dados, numeroContrato.dados)
+
+
+
+//                        contratoRepositorio.inserirDadosContrato(idUtilizador, nif, tipoContrato, empresa, marca, dadosCliente, moradas.dados, numeroContrato.dados)
 //                        val error = call3.await()
 
                         //_evento.value = Evento.Sucesso("LTC has  ")

@@ -8,6 +8,7 @@ import com.artemissoftware.vvmcontratos.api.Metodo
 import com.artemissoftware.vvmcontratos.api.MetodoTipos
 import com.artemissoftware.vvmcontratos.api.modelos.pedido.DadosClienteDto
 import com.artemissoftware.vvmcontratos.baseDados.entidades.Tipo
+import com.artemissoftware.vvmcontratos.repositorios.ContratoRepositorio
 import com.artemissoftware.vvmcontratos.repositorios.RedeRepositorio
 import com.artemissoftware.vvmcontratos.repositorios.TipoRepositorio
 import com.artemissoftware.vvmcontratos.utils.BaseViewModel
@@ -20,6 +21,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 class AcordoViewModel @ViewModelInject constructor(
+    private val contratoRepositorio: ContratoRepositorio,
     private val redeRepositorio: RedeRepositorio,
     private val tipoRepositorio: TipoRepositorio,
     private val dispatcherProvider: DispatcherProvider

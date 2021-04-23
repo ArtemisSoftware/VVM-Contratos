@@ -25,7 +25,7 @@ object BaseDadosModule {
     @Singleton
     fun provideBaseDados(app: Application/*, callback: BaseDados.Callback*/): BaseDados {
         return Room.databaseBuilder(app, BaseDados::class.java, NOME_BASE_DADOS)
-            //.fallbackToDestructiveMigration()
+            .fallbackToDestructiveMigration()
             //.addCallback(callback)
             .build()
     }
@@ -43,4 +43,12 @@ object BaseDadosModule {
     fun provideTipoRepositorio(atualizacaoDao: AtualizacaoDao, tipoDao: TipoDao): TipoRepositorio {
         return TipoRepositorioImpl(atualizacaoDao, tipoDao)
     }
+
+
+    @Provides
+    fun provideContratoDao(db: BaseDados) = db.contratoDao()
+
+
+    @Provides
+    fun provideMoradasDao(db: BaseDados) = db.moradaDao()
 }

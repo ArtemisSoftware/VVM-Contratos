@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 @Entity(
     tableName = "moradas",
     foreignKeys = [ForeignKey(
-        entity = Tipo::class,
+        entity = Contrato::class,
         parentColumns = ["id"],
         childColumns =  ["idContrato"],
         onDelete = ForeignKey.CASCADE

@@ -13,7 +13,7 @@ import javax.inject.Provider
 
 
 @Database(entities = [
-                        Atualizacao::class, Tipo::class, Detalhe::class,
+                        Atualizacao::class, Tipo::class, /*Detalhe::class,*/
 
                         Contrato::class, Cliente::class, Morada::class
                      ],

@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "23ddbf259c676a1d8fb2c7bb8d4f3eaa",
+    "identityHash": "21050aeba44391ef6fed0ead26e1e759",
     "entities": [
       {
         "tableName": "atualizacoes",
@@ -109,12 +109,360 @@
             ]
           }
         ]
+      },
+      {
+        "tableName": "contratos",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `uuid` TEXT NOT NULL, `idUtilizador` TEXT NOT NULL, `nif` TEXT NOT NULL, `idTipo` INTEGER NOT NULL, `idEmpresa` INTEGER NOT NULL, `idMarca` INTEGER NOT NULL, `numero` TEXT NOT NULL, `sincronizado` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "uuid",
+            "columnName": "uuid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idUtilizador",
+            "columnName": "idUtilizador",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nif",
+            "columnName": "nif",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idTipo",
+            "columnName": "idTipo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idEmpresa",
+            "columnName": "idEmpresa",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idMarca",
+            "columnName": "idMarca",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "numero",
+            "columnName": "numero",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sincronizado",
+            "columnName": "sincronizado",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "clientes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idContrato` INTEGER NOT NULL, `idMorada` INTEGER NOT NULL, `nome` TEXT NOT NULL, `email` TEXT NOT NULL, `emailAutorizado` INTEGER NOT NULL, `idGrupoAtividade` TEXT NOT NULL, `idAtividade1` TEXT NOT NULL, `idAtividade2` TEXT NOT NULL, `extintores` INTEGER NOT NULL, `responsavel` TEXT NOT NULL, `nif` TEXT NOT NULL, `novo` INTEGER NOT NULL, `nib` TEXT NOT NULL, `niss` TEXT NOT NULL, `segmento` TEXT NOT NULL, `clean` TEXT NOT NULL, PRIMARY KEY(`idContrato`), FOREIGN KEY(`idContrato`) REFERENCES `contratos`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "idContrato",
+            "columnName": "idContrato",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idMorada",
+            "columnName": "idMorada",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nome",
+            "columnName": "nome",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "emailAutorizado",
+            "columnName": "emailAutorizado",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idGrupoAtividade",
+            "columnName": "idGrupoAtividade",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idAtividade1",
+            "columnName": "idAtividade1",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idAtividade2",
+            "columnName": "idAtividade2",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "extintores",
+            "columnName": "extintores",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "responsavel",
+            "columnName": "responsavel",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nif",
+            "columnName": "nif",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "novo",
+            "columnName": "novo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nib",
+            "columnName": "nib",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "niss",
+            "columnName": "niss",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "segmento",
+            "columnName": "segmento",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "clean",
+            "columnName": "clean",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idContrato"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "contratos",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "idContrato"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "moradas",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `idContrato` INTEGER NOT NULL, `idMorada` TEXT NOT NULL, `idTipoMorada` INTEGER NOT NULL, `idMarca` INTEGER NOT NULL, `endereco` TEXT NOT NULL, `nova` INTEGER NOT NULL, `freguesia` TEXT NOT NULL, `localidade` TEXT NOT NULL, `cp4` TEXT NOT NULL, `cp3` TEXT NOT NULL, `cpalf` TEXT NOT NULL, `email` TEXT NOT NULL, `telefone1` TEXT NOT NULL, `telefone2` TEXT NOT NULL, `fax1` TEXT NOT NULL, `fax2` TEXT NOT NULL, `pontoReferencia` TEXT NOT NULL, `nomeContacto` TEXT NOT NULL, `responsavel` TEXT NOT NULL, `idCargo` INTEGER NOT NULL, `wifi` INTEGER NOT NULL, FOREIGN KEY(`idContrato`) REFERENCES `contratos`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idContrato",
+            "columnName": "idContrato",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idMorada",
+            "columnName": "idMorada",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idTipoMorada",
+            "columnName": "idTipoMorada",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idMarca",
+            "columnName": "idMarca",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endereco",
+            "columnName": "endereco",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nova",
+            "columnName": "nova",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "freguesia",
+            "columnName": "freguesia",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "localidade",
+            "columnName": "localidade",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cp4",
+            "columnName": "cp4",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cp3",
+            "columnName": "cp3",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cpalf",
+            "columnName": "cpalf",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telefone1",
+            "columnName": "telefone1",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telefone2",
+            "columnName": "telefone2",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fax1",
+            "columnName": "fax1",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fax2",
+            "columnName": "fax2",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pontoReferencia",
+            "columnName": "pontoReferencia",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nomeContacto",
+            "columnName": "nomeContacto",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "responsavel",
+            "columnName": "responsavel",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idCargo",
+            "columnName": "idCargo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wifi",
+            "columnName": "wifi",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "contratos",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "idContrato"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
       }
     ],
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '23ddbf259c676a1d8fb2c7bb8d4f3eaa')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '21050aeba44391ef6fed0ead26e1e759')"
     ]
   }
 }

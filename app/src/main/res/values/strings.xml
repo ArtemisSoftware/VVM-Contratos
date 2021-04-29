@@ -163,4 +163,9 @@
     <string name="key_ultima_atualizacao">atualizacao</string>
     <string name="definicoes">Definições</string>
     <string name="recarregar_tipos">Recarregar tipos</string>
+    <string name="numero_">Número:</string>
+    <string name="data_">Data:</string>
+    <string name="data_termino_edicao_">Data de término da edição:</string>
+    <string name="empresa_">Empresa:</string>
+    <string name="marca_">Marca:</string>
 </resources>

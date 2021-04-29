@@ -16,6 +16,7 @@ import androidx.navigation.ui.onNavDestinationSelected
 import com.artemissoftware.vvmcontratos.R
 import com.artemissoftware.vvmcontratos.databinding.FragmentAcordoBinding
 import com.artemissoftware.vvmcontratos.utils.BaseViewModel
+import com.artemissoftware.vvmcontratos.utils.extensoes.obterTipoSelecionado
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_acordo.*
 import kotlinx.coroutines.flow.collect
@@ -45,6 +46,10 @@ class AcordoFragment : Fragment(R.layout.fragment_acordo) {
         btn_validar.setOnClickListener {
             viewModel.obterDadosCliente(txt_nif.text.toString())
         }
+
+        btn_iniciar.setOnClickListener {
+            viewModel.obterDadosContrato("500005", txt_nif.text.toString(), spinner_tipo_contrato.obterTipoSelecionado(), spinner_empresa.obterTipoSelecionado(), spinner_marca.obterTipoSelecionado())
+        }
     }
 
 
@@ -58,6 +63,8 @@ class AcordoFragment : Fragment(R.layout.fragment_acordo) {
                     is BaseViewModel.Evento.Sucesso -> {
                         loading.isVisible = false
 
+                        val action = AcordoFragmentDirections.actionAcordoFragmentToClienteFragment()
+                        findNavController().navigate(action)
                     }
 
                     is BaseViewModel.Evento.Erro -> {

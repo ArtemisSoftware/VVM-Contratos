@@ -39,10 +39,10 @@ data class ClienteDto(
     val email: String,
 
     @SerializedName("emailAut")
-    val emailAutenticado: String,
+    val emailAutenticado: Int,
 
     @SerializedName("Extintores")
-    val extintores: String,
+    val extintores: Int,
 
     @SerializedName("Marca")
     val marca: String,

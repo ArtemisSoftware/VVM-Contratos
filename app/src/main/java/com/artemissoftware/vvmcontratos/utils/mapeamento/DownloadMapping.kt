@@ -1,10 +1,11 @@
 package com.artemissoftware.vvmcontratos.utils.mapeamento
 
 import com.artemissoftware.vvmcontratos.api.modelos.ListagemDto
+import com.artemissoftware.vvmcontratos.api.modelos.pedido.DadosClienteDto
+import com.artemissoftware.vvmcontratos.api.modelos.pedido.MoradaDto
 import com.artemissoftware.vvmcontratos.api.modelos.pedido.TipoDto
-import com.artemissoftware.vvmcontratos.baseDados.entidades.Atualizacao
-import com.artemissoftware.vvmcontratos.baseDados.entidades.Detalhe
-import com.artemissoftware.vvmcontratos.baseDados.entidades.Tipo
+import com.artemissoftware.vvmcontratos.baseDados.entidades.*
+import com.artemissoftware.vvmcontratos.utils.constantes.Identificadores
 
 fun ListagemDto<TipoDto>.map() = Atualizacao(
     descricao = metodo,
@@ -76,5 +77,94 @@ private fun obterDetalhe(metodo: String, tipo: TipoDto, detalhe: List<String>, i
 
     return rr
 }
+
+
+fun DadosClienteDto.map(idContrato: Int): MutableList<Cliente> {
+
+    val clientes = mutableListOf<Cliente>()
+
+    this.clientes.forEach {
+
+        var idGrupoAtividade: Int
+        var idAtividade1: String
+        var idAtividade2: String? = null
+
+        if (it.cae.equals("") == false) {
+
+            idGrupoAtividade  = Identificadores.CAE
+            idAtividade1 = it.cae
+
+            if (it.actividadeCae2.equals("") == false) {
+                idAtividade2 = it.cae2
+            }
+
+        }
+        else{
+            idGrupoAtividade  = Identificadores.CIRS
+            idAtividade1 = it.cirs
+        }
+
+
+        clientes.add(
+            Cliente(
+                idContrato = idContrato,
+                nome = it.nome,
+                email = it.email,
+                responsavel = it.responsavel,
+                nib = it.nib,
+                niss = it.niss,
+                segmento = it.segmento,
+                clean = it.clean,
+                nif = it.nif,
+                idGrupoAtividade = idGrupoAtividade,
+                idAtividade1 = idAtividade1,
+                idAtividade2 = idAtividade2,
+                emailAutorizado = if (it.emailAutenticado == 1) true else false,
+                extintores = if (it.extintores == 1) true else false
+            )
+        )
+    }
+
+
+    return clientes
+}
+
+
+fun MoradaDto.map(idContrato: Int): MutableList<Morada> {
+
+    val moradas = mutableListOf<Morada>()
+
+    this.enderecos.forEach {
+
+        moradas.add(
+            Morada(
+                idContrato = idContrato,
+                idMorada = it.idMorada.toString(),
+                idTipoMorada = it.idTipoMorada,
+                endereco = it.morada,
+                idMarca = it.idMarca,
+
+                freguesia = it.freguesia,
+                localidade = it.localidade,
+                cp4 = it.cp4,
+                cp3 = it.cp3,
+                cpalf = it.cpalf,
+
+                email = it.email,
+                telefone1 = it.telefone1,
+                telefone2 = it.telefone2,
+                fax1 = it.fax1,
+                fax2 = it.fax2,
+                responsavel = it.responsavel,
+                wifi = true
+
+            )
+        )
+    }
+
+
+    return moradas
+}
+
 
 //fun Boolean.toInt() = if (this) 1 else

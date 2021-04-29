@@ -22,3 +22,7 @@ fun MaterialSpinner.fixarTipos(tipos : List<Tipo>?) {
     }
 
 }
+
+fun MaterialSpinner.obterTipoSelecionado(): Tipo {
+    return this.getItems<Tipo>()[this.selectedIndex]
+}

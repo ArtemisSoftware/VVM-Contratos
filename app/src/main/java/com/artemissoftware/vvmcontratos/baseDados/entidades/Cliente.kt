@@ -19,16 +19,16 @@ data class Cliente (
     @PrimaryKey
     val idContrato: Int,
 
-    val idMorada: Int,
+    val idMorada: String? = null,
     val nome: String,
 
     val email: String,
     val emailAutorizado: Boolean = false,
 
 
-    val idGrupoAtividade: String,
+    val idGrupoAtividade: Int,
     val idAtividade1: String,
-    val idAtividade2: String,
+    val idAtividade2: String? = null,
 
 
     val extintores: Boolean = false,

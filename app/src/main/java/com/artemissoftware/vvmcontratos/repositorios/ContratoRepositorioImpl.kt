@@ -8,6 +8,7 @@ import com.artemissoftware.vvmcontratos.baseDados.dao.ContratoDao
 import com.artemissoftware.vvmcontratos.baseDados.dao.MoradaDao
 import com.artemissoftware.vvmcontratos.baseDados.entidades.Contrato
 import com.artemissoftware.vvmcontratos.baseDados.entidades.Tipo
+import com.artemissoftware.vvmcontratos.utils.mapeamento.map
 import javax.inject.Inject
 
 class ContratoRepositorioImpl @Inject constructor(private val contratoDao: ContratoDao,
@@ -20,9 +21,13 @@ class ContratoRepositorioImpl @Inject constructor(private val contratoDao: Contr
 
         val contrato = Contrato(idUtilizador, nif, tipoContrato, empresa, marca, numeroContrato.numeroContrato)
 
-        //val idContrato = contratoDao.inserir(contrato)
+        val idContrato = contratoDao.inserir(contrato)
 
-        //clienteDao.inserir()
-        //moradaDao.inserir()
+        val clientes = cliente.map(idContrato = idContrato.toInt())
+        clienteDao.inserir(clientes)
+
+
+        val enderecos = moradas.map(idContrato = idContrato.toInt())
+        moradaDao.inserir(enderecos)
     }
 }

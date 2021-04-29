@@ -32,19 +32,19 @@ data class Morada(
     val localidade: String,
     val cp4: String,
     val cp3: String,
-    val cpalf: String,
+    val cpalf: String? = null,
 
     val email: String,
     val telefone1: String,
-    val telefone2: String,
-    val fax1: String,
-    val fax2: String,
+    val telefone2: String? = null,
+    val fax1: String? = null,
+    val fax2: String? = null,
 
-    val pontoReferencia: String,
-    val nomeContacto: String,
+    val pontoReferencia: String? = null,
+    val nomeContacto: String? = null,
     val responsavel: String,
-    val idCargo: Int,
-    val wifi: Int
+    val idCargo: Int = 0,
+    val wifi: Boolean
 
 
 

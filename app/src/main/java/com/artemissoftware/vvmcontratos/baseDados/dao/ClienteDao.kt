@@ -10,4 +10,7 @@ interface ClienteDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun inserir(cliente: Cliente)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun inserir(cliente: List<Cliente>)
 }

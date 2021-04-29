@@ -40,13 +40,13 @@ data class EnderecoDto(
     val idMorada: Int,
 
     @SerializedName("IdTipoMorada")
-    val idTipoMorada: String,
+    val idTipoMorada: Int,
 
     @SerializedName("Localidade")
     val localidade: String,
 
     @SerializedName("Marca")
-    val marca: Int,
+    val idMarca: Int,
 
     @SerializedName("Morada")
     val morada: String,

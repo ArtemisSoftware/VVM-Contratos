@@ -64,7 +64,6 @@ class AcordoViewModel @ViewModelInject constructor(
                         _mensagem.value = EventoAcordo.ObterDadosContrato(texto)
                     }
                 }
-
             }
         }
     }
@@ -72,26 +71,23 @@ class AcordoViewModel @ViewModelInject constructor(
 
     fun obterDadosContrato(idUtilizador: String, nif: String, tipoContrato: Tipo, empresa: Tipo, marca: Tipo) {
 
+        _evento.value = Evento.Loading
+
         viewModelScope.launch(dispatcherProvider.io) {
+
             try {
                 coroutineScope {
 
-                    _evento.value = Evento.Loading
-
                     val respostasMoradas = async { redeRepositorio.obterMoradasCliente(nif, empresa.descricao) }
                     val respostaNumeroContrato = async { redeRepositorio.obterNumeroContrato (empresa.id.toString(), marca.id.toString()) }
-//                    val call3 = async { cryptoCurrencyRepository.getError() }
 
                     try {
                         val moradas = respostasMoradas.await()
                         val numeroContrato = respostaNumeroContrato.await()
 
+                        contratoRepositorio.inserirDadosContrato(idUtilizador, nif, tipoContrato, empresa, marca, dadosCliente, moradas.dados!!, numeroContrato.dados!!)
 
-
-//                        contratoRepositorio.inserirDadosContrato(idUtilizador, nif, tipoContrato, empresa, marca, dadosCliente, moradas.dados, numeroContrato.dados)
-//                        val error = call3.await()
-
-                        //_evento.value = Evento.Sucesso("LTC has  ")
+                        _evento.value = Evento.Sucesso("LTC has  ")
 
                     } catch (e: Exception) {
                         _evento.value = Evento.Erro(e.message!!)

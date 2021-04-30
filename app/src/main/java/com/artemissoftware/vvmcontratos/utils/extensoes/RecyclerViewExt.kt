@@ -4,6 +4,7 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.artemissoftware.vvmcontratos.baseDados.entidades.Contrato
+import com.artemissoftware.vvmcontratos.ui.acordo.adaptadores.AcordosAdaptador
 import com.jaredrummler.materialspinner.MaterialSpinner
 
 
@@ -21,15 +22,9 @@ fun RecyclerView.setAcordosRealizados(items: List<Contrato>?/*,listener: OnAnoma
     }
 
     if(this.adapter == null){
-
+        this.adapter = AcordosAdaptador()
     }
 
-//    var adapter: AnomaliaRegistadaRecyclerAdapter? =
-//        view.adapter as AnomaliaRegistadaRecyclerAdapter?
-//    if (adapter == null) {
-//        adapter = AnomaliaRegistadaRecyclerAdapter(view.context, items, listener)
-//        view.adapter = adapter
-//    } else {
-//        adapter.atualizar(items)
-//    }
+    (this.adapter as AcordosAdaptador).submitList(items)
+
 }

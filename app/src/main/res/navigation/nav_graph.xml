@@ -55,5 +55,9 @@
     <fragment
         android:id="@+id/acordosRealizadosFragment"
         android:name="com.artemissoftware.vvmcontratos.ui.acordo.AcordosRealizadosFragment"
-        android:label="AcordosRealizadosFragment" />
+        android:label="AcordosRealizadosFragment" >
+        <action
+            android:id="@+id/action_acordosRealizadosFragment_to_clienteFragment"
+            app:destination="@id/clienteFragment" />
+    </fragment>
 </navigation>

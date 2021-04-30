@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.artemissoftware.vvmcontratos.api.Metodo
 import com.artemissoftware.vvmcontratos.api.MetodoTipos
 import com.artemissoftware.vvmcontratos.api.modelos.pedido.DadosClienteDto
+import com.artemissoftware.vvmcontratos.baseDados.entidades.Contrato
 import com.artemissoftware.vvmcontratos.baseDados.entidades.Tipo
 import com.artemissoftware.vvmcontratos.repositorios.ContratoRepositorio
 import com.artemissoftware.vvmcontratos.repositorios.RedeRepositorio
@@ -36,6 +37,8 @@ class AcordoViewModel @ViewModelInject constructor(
     val tiposContratos: LiveData<List<Tipo>> = tipoRepositorio.obteTipo(MetodoTipos.TIPOS_CONTRATOS)
     val tiposEmpresas: LiveData<List<Tipo>> = tipoRepositorio.obteTipo(MetodoTipos.EMPRESAS_VIVAMAIS)
     val tiposMarcas: LiveData<List<Tipo>> = tipoRepositorio.obteTipo(MetodoTipos.MARCAS)
+
+    val acordosRealizados: LiveData<List<Contrato>> = contratoRepositorio.obterAcordosRealizados()
 
 
     fun obterDadosCliente(nif: String) {
@@ -103,8 +106,17 @@ class AcordoViewModel @ViewModelInject constructor(
     }
 
 
+    var _lolo = MutableLiveData<List<Contrato>>()
+    var lolo: LiveData<List<Contrato>>? = null;
+var fofo = 0
 
-    fun obterAcordosRealizados() = contratoRepositorio.obterAcordosRealizados()
+    fun koko(){
+        fofo = 3;
+    }
+
+    fun obterAcordosRealizados(){
+        lolo = contratoRepositorio.obterAcordosRealizados()
+    }
 
 
 

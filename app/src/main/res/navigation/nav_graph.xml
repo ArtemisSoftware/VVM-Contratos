@@ -52,4 +52,8 @@
         android:id="@+id/definicoesFragment"
         android:name="com.artemissoftware.vvmcontratos.ui.definicoes.DefinicoesFragment"
         android:label="DefinicoesFragment" />
+    <fragment
+        android:id="@+id/acordosRealizadosFragment"
+        android:name="com.artemissoftware.vvmcontratos.ui.acordo.AcordosRealizadosFragment"
+        android:label="AcordosRealizadosFragment" />
 </navigation>

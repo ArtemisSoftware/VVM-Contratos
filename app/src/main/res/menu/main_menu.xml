@@ -2,10 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+<!--    <item-->
+<!--        android:id="@+id/clienteFragment"-->
+<!--        android:icon="@drawable/ic_lorem_ipsum_24"-->
+<!--        android:title="@string/cliente"-->
+<!--        app:showAsAction="ifRoom"/>-->
+
     <item
-        android:id="@+id/clienteFragment"
-        android:icon="@drawable/ic_lorem_ipsum_24"
-        android:title="@string/cliente"
-        app:showAsAction="ifRoom"/>
+        android:id="@+id/acordosRealizadosFragment"
+        android:title="@string/acordos_realizados"/>
 
 </menu>

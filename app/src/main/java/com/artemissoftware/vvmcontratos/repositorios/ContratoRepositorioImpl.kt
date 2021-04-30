@@ -1,5 +1,6 @@
 package com.artemissoftware.vvmcontratos.repositorios
 
+import androidx.lifecycle.LiveData
 import com.artemissoftware.vvmcontratos.api.modelos.pedido.DadosClienteDto
 import com.artemissoftware.vvmcontratos.api.modelos.pedido.MoradaDto
 import com.artemissoftware.vvmcontratos.api.modelos.pedido.NumeroContratoDto
@@ -29,5 +30,10 @@ class ContratoRepositorioImpl @Inject constructor(private val contratoDao: Contr
 
         val enderecos = moradas.map(idContrato = idContrato.toInt())
         moradaDao.inserir(enderecos)
+    }
+
+
+    override fun obterAcordosRealizados(): LiveData<List<Contrato>> {
+        return contratoDao.obterAcordosRealizados()
     }
 }

@@ -103,6 +103,11 @@ class AcordoViewModel @ViewModelInject constructor(
     }
 
 
+
+    fun obterAcordosRealizados() = contratoRepositorio.obterAcordosRealizados()
+
+
+
     sealed class EventoAcordo {
         class ObterDadosContrato(val estado: String) : EventoAcordo()
         object SemEstado : EventoAcordo()

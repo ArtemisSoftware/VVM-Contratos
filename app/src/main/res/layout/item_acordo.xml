@@ -136,8 +136,9 @@
                 android:id="@+id/textView8"
                 style="@style/texto"
 
+                android:layout_marginStart="8dp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView7"
-                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
                 app:layout_constraintTop_toTopOf="@+id/textView7" />
 
             <TextView

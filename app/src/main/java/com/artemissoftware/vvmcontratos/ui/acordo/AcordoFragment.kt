@@ -1,5 +1,6 @@
 package com.artemissoftware.vvmcontratos.ui.acordo
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -15,6 +16,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.onNavDestinationSelected
 import com.artemissoftware.vvmcontratos.R
 import com.artemissoftware.vvmcontratos.databinding.FragmentAcordoBinding
+import com.artemissoftware.vvmcontratos.ui.ContratoActivity
 import com.artemissoftware.vvmcontratos.utils.BaseViewModel
 import com.artemissoftware.vvmcontratos.utils.extensoes.obterTipoSelecionado
 import dagger.hilt.android.AndroidEntryPoint
@@ -65,8 +67,11 @@ class AcordoFragment : Fragment(R.layout.fragment_acordo) {
                     is BaseViewModel.Evento.Sucesso -> {
                         loading.isVisible = false
 
-                        val action = AcordoFragmentDirections.actionAcordoFragmentToClienteFragment()
-                        findNavController().navigate(action)
+
+                        //TODO: gravar nas preferencias o identificador do acordo
+                        val intent = Intent(requireContext(), ContratoActivity::class.java)
+                        intent.putExtra("keyIdentifier", 1)
+                        startActivity(intent)
                     }
 
                     is BaseViewModel.Evento.Erro -> {

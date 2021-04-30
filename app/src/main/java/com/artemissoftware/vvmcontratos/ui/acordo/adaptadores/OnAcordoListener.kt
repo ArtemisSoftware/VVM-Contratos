@@ -4,6 +4,6 @@ import com.artemissoftware.vvmcontratos.baseDados.entidades.Contrato
 
 interface OnAcordoListener {
 
-    fun AcordoClick(contrato: Contrato)
+    fun onAcordoClick(contrato: Contrato)
 
 }

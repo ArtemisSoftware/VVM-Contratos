@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.artemissoftware.vvmcontratos.baseDados.entidades.Contrato
 import com.artemissoftware.vvmcontratos.databinding.ItemAcordoBinding
 
-class AcordosAdaptador(/*private val listener: onItemClickListener*/) : ListAdapter<Contrato, AcordosAdaptador.AcordoViewHolder>(DiffCallback()) {
+class AcordosAdaptador(private val listener: OnAcordoListener) : ListAdapter<Contrato, AcordosAdaptador.AcordoViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AcordoViewHolder {
         val binding = ItemAcordoBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -22,33 +22,25 @@ class AcordosAdaptador(/*private val listener: onItemClickListener*/) : ListAdap
 
     inner class AcordoViewHolder(private val binding: ItemAcordoBinding) : RecyclerView.ViewHolder(binding.root) {
 
-//        init {
-//            binding.apply {
-//                root.setOnClickListener {
-//
-//                    val position = adapterPosition
-//
-//                    if(position != RecyclerView.NO_POSITION){
-//                        val task = getItem(position)
-//                        listener.onItemClick(task)
-//                    }
-//
-//                }
+        init {
+            binding.apply {
+                root.setOnClickListener {
 
-//            }
-//        }
+                    val position = adapterPosition
+
+                    if(position != RecyclerView.NO_POSITION){
+                        val registo = getItem(position)
+                        listener.onAcordoClick(registo)
+                    }
+                }
+            }
+        }
 
         fun bind(registo: Contrato) {
             binding.acordo = registo
         }
     }
-//
-//    interface  onItemClickListener{
-//
-//        fun onItemClick(task: Task)
-//        fun onCheckboxClick(task: Task, isChecked: Boolean)
-//
-//    }
+
 
 
     class DiffCallback : DiffUtil.ItemCallback<Contrato>() {

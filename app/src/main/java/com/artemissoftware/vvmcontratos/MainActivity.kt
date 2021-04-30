@@ -36,20 +36,6 @@ class MainActivity : AppCompatActivity() {
 //        setSupportActionBar(toolbar)
 //        setupActionBarWithNavController(navController, appBarConfiguration)
 
-        //possivel alternativa
-        navController.addOnDestinationChangedListener { _, destination, _ ->
-            if(destination.id == R.id.acordoFragment) {
-
-                bottom_nav.visibility = View.GONE
-            } else {
-                bottom_nav.visibility = View.VISIBLE
-            }
-        }
-
-
-//https://stackoverflow.com/questions/62551658/hide-bottom-navigation-view-in-fragment
-        //---
-        bottom_nav.setupWithNavController(navController)
 
 
 

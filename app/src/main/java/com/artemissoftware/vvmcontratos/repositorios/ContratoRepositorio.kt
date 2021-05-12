@@ -6,6 +6,7 @@ import com.artemissoftware.vvmcontratos.api.modelos.pedido.MoradaDto
 import com.artemissoftware.vvmcontratos.api.modelos.pedido.NumeroContratoDto
 import com.artemissoftware.vvmcontratos.baseDados.entidades.Contrato
 import com.artemissoftware.vvmcontratos.baseDados.entidades.Tipo
+import com.artemissoftware.vvmcontratos.ui.cliente.modelos.ClienteRegisto
 
 
 interface ContratoRepositorio {
@@ -16,4 +17,6 @@ interface ContratoRepositorio {
 
     fun obterAcordosRealizados(): LiveData<List<Contrato>>
 
+
+    fun obterCliente(idContrato: Int): LiveData<ClienteRegisto>
 }

@@ -129,6 +129,11 @@ dependencies {
 
     def Hasher_version = "1.2"
     implementation "com.github.ihimanshurawat:Hasher:$Hasher_version"
+
+    def fab_version = "1.6.4"
+    implementation "com.github.clans:fab:$fab_version"
+
+
 //
 //
 //    def dexter_version = "6.0.2"

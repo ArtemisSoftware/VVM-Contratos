@@ -43,8 +43,6 @@ class AcordoFragment : Fragment(R.layout.fragment_acordo) {
         binding.setLifecycleOwner(this)
         binding.setViewmodel(viewModel)
 
-        viewModel.koko()
-
         subscreverObservadores()
 
         btn_validar.setOnClickListener {

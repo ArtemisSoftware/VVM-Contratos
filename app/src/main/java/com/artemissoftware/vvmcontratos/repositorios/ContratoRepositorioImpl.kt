@@ -9,6 +9,7 @@ import com.artemissoftware.vvmcontratos.baseDados.dao.ContratoDao
 import com.artemissoftware.vvmcontratos.baseDados.dao.MoradaDao
 import com.artemissoftware.vvmcontratos.baseDados.entidades.Contrato
 import com.artemissoftware.vvmcontratos.baseDados.entidades.Tipo
+import com.artemissoftware.vvmcontratos.ui.cliente.modelos.ClienteRegisto
 import com.artemissoftware.vvmcontratos.utils.mapeamento.map
 import javax.inject.Inject
 
@@ -36,4 +37,11 @@ class ContratoRepositorioImpl @Inject constructor(private val contratoDao: Contr
     override fun obterAcordosRealizados(): LiveData<List<Contrato>> {
         return contratoDao.obterAcordosRealizados()
     }
+
+
+    override fun obterCliente(idContrato: Int): LiveData<ClienteRegisto> {
+        return clienteDao.obterCliente(idContrato)
+    }
+
+
 }

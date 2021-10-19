@@ -169,4 +169,6 @@
     <string name="empresa_">Empresa:</string>
     <string name="marca_">Marca:</string>
     <string name="acordos_realizados">Acordos realizados</string>
+    <string name="cp3">CP3</string>
+    <string name="cp4">CP4</string>
 </resources>

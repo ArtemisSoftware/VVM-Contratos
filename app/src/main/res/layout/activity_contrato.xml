@@ -32,7 +32,7 @@
 
 
         <com.github.clans.fab.FloatingActionMenu
-            android:id="@+id/menu"
+            android:id="@+id/fabMenu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@id/bottom_nav"
@@ -40,13 +40,13 @@
             android:layout_alignParentBottom="true"
 
             android:elevation="10dp"
-            android:paddingBottom="55dp"
-            android:paddingEnd="10dp"
+            android:paddingBottom="65dp"
+            android:paddingEnd="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/nav_host_fragment"
             app:layout_constraintEnd_toEndOf="@+id/nav_host_fragment"
             app:layout_constraintStart_toStartOf="@+id/nav_host_fragment"
-
             app:layout_constraintTop_toTopOf="@+id/nav_host_fragment"
+
             app:menu_animationDelayPerItem="50"
             app:menu_backgroundColor="#E6FFFFFF"
             app:menu_buttonSpacing="0dp"
@@ -84,7 +84,7 @@
             app:menu_showShadow="true">
 
             <com.github.clans.fab.FloatingActionButton
-                android:id="@+id/menu_item"
+                android:id="@+id/fabMorada"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_lorem_ipsum_24"

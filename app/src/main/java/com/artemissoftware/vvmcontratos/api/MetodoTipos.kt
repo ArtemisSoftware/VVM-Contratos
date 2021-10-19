@@ -9,7 +9,10 @@ class MetodoTipos {
         val TIPOS_CONTRATOS = Metodo("Tipos_Contrato","Obter_TiposContrato")
 
 
-        val LISTAGEM = listOf<Metodo>(EMPRESAS_VIVAMAIS, MARCAS, TIPOS_CONTRATOS)
+        val TIPOS_MORADAS = Metodo("Tipos_Morada","Obter_TiposMorada")
+
+
+        val LISTAGEM = listOf<Metodo>(EMPRESAS_VIVAMAIS, MARCAS, TIPOS_CONTRATOS, TIPOS_MORADAS)
 
 
         /**

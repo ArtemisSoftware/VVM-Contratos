@@ -30,4 +30,9 @@
         android:name="com.artemissoftware.vvmcontratos.ui.rever.ReverConcluirFragment"
         android:label="fragment_rever_concluir"
         tools:layout="@layout/fragment_rever_concluir" />
+    <fragment
+        android:id="@+id/registoMoradaFragment"
+        android:name="com.artemissoftware.vvmcontratos.ui.morada.RegistoMoradaFragment"
+        android:label="fragment_morada_registo"
+        tools:layout="@layout/fragment_morada_registo" />
 </navigation>

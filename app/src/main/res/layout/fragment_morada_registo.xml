@@ -2,8 +2,7 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.morada.MoradaRegistoFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -12,22 +11,8 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
-
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/AppTheme.AppBarOverlay">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-        </com.google.android.material.appbar.AppBarLayout>
-
+        android:fitsSystemWindows="true"
+        tools:context=".ui.morada.MoradaRegistoFragment">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -95,36 +80,55 @@
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textview3"
                         style="@style/parentView"
-                        android:hint="@string/codigo_postal"
-                        android:layout_width="400dp"
+                        android:hint="@string/cp4"
+                        android:layout_width="120dp"
                         app:errorEnabled="true"
                         android:layout_marginTop="32dp"
                         app:layout_constraintStart_toStartOf="@+id/textView18"
                         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txt_inp_cliente"
+                            android:id="@+id/txt_inp_cp4"
                             style="@style/texto.editavel"
-                            android:inputType="textPostalAddress"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:maxLines="1"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
 
 
-                    <TextView
-                        style="@style/texto.rotulo.descricao"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textview31"
+                        style="@style/parentView"
+                        android:layout_width="120dp"
+                        android:layout_marginStart="24dp"
+                        android:hint="@string/cp3"
+
+                        app:errorEnabled="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/textview3"
+                        app:layout_constraintStart_toEndOf="@+id/textview3"
+                        app:layout_constraintTop_toTopOf="@+id/textview3">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txt_inp_cp3"
+                            style="@style/texto.editavel"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_pesquisar_morada"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
-                        android:text="@string/lorem_ipsum_numero"
-                        app:layout_constraintBottom_toBottomOf="@+id/textview3"
-                        app:layout_constraintStart_toEndOf="@+id/textview3"
-                        app:layout_constraintTop_toTopOf="@+id/textview3" />
-
-                    <!--                        <at.markushi.ui.CircleButton-->
-                    <!--                            android:id="@+id/crl_btn_pesquisar_categorias_profissionais"-->
-                    <!--                            style="@style/btnPesquisa" />-->
-
+                        android:elevation="10dp"
+                        android:src="@drawable/ic_launcher_foreground"
+                        app:layout_constraintBottom_toBottomOf="@+id/textview31"
+                        app:layout_constraintStart_toEndOf="@+id/textview31"
+                        app:layout_constraintTop_toTopOf="@+id/textview31" />
 
 
 
@@ -180,7 +184,7 @@
                         android:id="@+id/textview6"
                         style="@style/parentView"
                         android:hint="@string/freguesia"
-                        android:layout_width="400dp"
+                        android:layout_width="300dp"
                         app:errorEnabled="true"
                         android:layout_marginTop="32dp"
                         app:layout_constraintStart_toStartOf="@+id/textView18"
@@ -198,7 +202,7 @@
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textview7"
                         style="@style/parentView"
-                        android:layout_width="400dp"
+                        android:layout_width="300dp"
                         android:layout_marginStart="24dp"
                         android:hint="@string/localidade"
                         app:errorEnabled="true"
@@ -317,20 +321,17 @@
                             app:layout_constraintStart_toStartOf="parent" />
 
 
-                        <TextView
-                            style="@style/texto.rotulo.descricao"
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/fab_pesquisar_cargo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:text="@string/lorem_ipsum_numero"
+                            android:layout_marginStart="24dp"
+                            android:elevation="10dp"
+                            android:src="@drawable/ic_launcher_foreground"
                             app:layout_constraintBottom_toBottomOf="@+id/linearLayout14"
                             app:layout_constraintStart_toStartOf="@+id/guideline"
                             app:layout_constraintTop_toTopOf="@+id/linearLayout14" />
 
-
-                        <!--                        <at.markushi.ui.CircleButton-->
-                        <!--                            android:id="@+id/crl_btn_pesquisar_categorias_profissionais"-->
-                        <!--                            style="@style/btnPesquisa" />-->
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -345,7 +346,7 @@
                         android:id="@+id/textview10"
                         style="@style/parentView"
                         android:hint="@string/telefone"
-                        android:layout_width="400dp"
+                        android:layout_width="300dp"
                         app:errorEnabled="true"
                         android:layout_marginTop="32dp"
                         app:layout_constraintStart_toStartOf="@+id/textView18"
@@ -363,7 +364,7 @@
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textview11"
                         style="@style/parentView"
-                        android:layout_width="400dp"
+                        android:layout_width="300dp"
                         android:layout_marginStart="24dp"
                         android:hint="@string/telemovel"
                         app:errorEnabled="true"
@@ -390,7 +391,7 @@
                         android:id="@+id/textview12"
                         style="@style/parentView"
                         android:hint="@string/fax"
-                        android:layout_width="500dp"
+                        android:layout_width="200dp"
                         app:errorEnabled="true"
                         android:layout_marginTop="32dp"
                         android:layout_marginBottom="16dp"

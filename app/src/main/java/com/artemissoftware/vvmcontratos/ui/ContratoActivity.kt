@@ -52,6 +52,22 @@ class ContratoActivity : AppCompatActivity() {
 //
 //
 
+          navController.addOnDestinationChangedListener { _, destination, _ ->
+            if(destination.id == R.id.registoMoradaFragment) {
+
+                fabMenu.visibility = View.GONE
+                bottom_nav.visibility = View.GONE
+            } else {
+                fabMenu.visibility = View.VISIBLE
+                bottom_nav.visibility = View.VISIBLE
+            }
+        }
+
+
+        fabMorada.setOnClickListener {
+            navController.navigateUp() // to clear previous navigation history
+            navController.navigate(R.id.registoMoradaFragment)
+        }
 
     }
 }
